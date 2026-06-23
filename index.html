@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>喜乐与苏晨</title>
+    <title>曦月 &amp; 苏晨 — 光遇里的友情</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ========== 导航栏 ========== -->
+    <!-- ========== 星空背景 ========== -->
+    <canvas id="starfield"></canvas>
+
+    <!-- ========== 导航 ========== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">✦ 喜乐与苏晨</a>
+            <a href="#home" class="nav-logo">✦ 曦月 &amp; 苏晨</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active">首页</a></li>
-                <li><a href="#gallery">图册</a></li>
+                <li><a href="#letters">信笺</a></li>
                 <li><a href="#about">关于</a></li>
-                <li><a href="#contact">联系</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="菜单">
                 <span></span><span></span><span></span>
@@ -24,209 +29,89 @@
         </div>
     </nav>
 
-    <!-- ========== 首页 / Hero ========== -->
+    <!-- ========== Hero ========== -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="title-line">喜乐</span>
-                    <span class="title-line">&</span>
-                    <span class="title-line">苏晨</span>
-                </h1>
-                <p class="hero-subtitle">记录生活 · 分享美好</p>
-                <p class="hero-desc">
-                    用镜头定格瞬间，用文字留下回忆。<br>
-                    这里是我们的小世界。
-                </p>
-                <div class="hero-actions">
-                    <a href="#gallery" class="btn btn-primary">探索图册</a>
-                    <a href="#about" class="btn btn-outline">了解更多</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-shapes">
-                    <div class="shape shape-1"></div>
-                    <div class="shape shape-2"></div>
-                    <div class="shape shape-3"></div>
-                    <div class="shape shape-4"></div>
-                </div>
+            <div class="hero-emblem">☁️</div>
+            <h1 class="hero-title">
+                <span class="hero-name">曦月</span>
+                <span class="hero-amp">&amp;</span>
+                <span class="hero-name">苏晨</span>
+            </h1>
+            <p class="hero-sub">在光遇的天空下，相遇的故事</p>
+            <p class="hero-desc">
+                每一件事都值得被记住<br>
+                每一封信都是一段回忆
+            </p>
+            <a href="#letters" class="btn-hero">
+                <span class="btn-text">阅读信笺</span>
+                <span class="btn-arrow">→</span>
+            </a>
+            <div class="sky-candles">
+                <span class="candle" style="--d:0s">🕯</span>
+                <span class="candle" style="--d:0.5s">🕯</span>
+                <span class="candle" style="--d:1s">🕯</span>
+                <span class="candle" style="--d:1.5s">🕯</span>
             </div>
         </div>
         <div class="scroll-hint">
-            <span>向下滚动</span>
+            <span>展开信笺</span>
             <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- ========== 图册 ========== -->
-    <section class="gallery" id="gallery">
+    <!-- ========== 信笺集 ========== -->
+    <section class="letters" id="letters">
         <div class="section-header">
-            <span class="section-tag">Gallery</span>
-            <h2>图册</h2>
-            <p class="section-desc">生活中的美好瞬间</p>
+            <span class="section-tag">✉ Letters</span>
+            <h2>信笺集</h2>
+            <p class="section-desc">按日期整理的点滴回忆</p>
         </div>
-        <div class="gallery-grid" id="galleryGrid">
-            <!-- 占位图片 – 用户可替换为自己的图片 -->
-            <div class="gallery-item" data-category="life">
-                <div class="gallery-img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                    <div class="gallery-placeholder">
-                        <span class="placeholder-icon">🖼</span>
-                        <span>你的图片</span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3>添加你的照片</h3>
-                    <p>把图片放到 images/ 目录下即可</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="travel">
-                <div class="gallery-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                    <div class="gallery-placeholder">
-                        <span class="placeholder-icon">🗺</span>
-                        <span>你的图片</span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3>添加你的照片</h3>
-                    <p>把图片放到 images/ 目录下即可</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="daily">
-                <div class="gallery-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                    <div class="gallery-placeholder">
-                        <span class="placeholder-icon">📸</span>
-                        <span>你的图片</span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3>添加你的照片</h3>
-                    <p>把图片放到 images/ 目录下即可</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="life">
-                <div class="gallery-img" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
-                    <div class="gallery-placeholder">
-                        <span class="placeholder-icon">🎨</span>
-                        <span>你的图片</span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3>添加你的照片</h3>
-                    <p>把图片放到 images/ 目录下即可</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="travel">
-                <div class="gallery-img" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-                    <div class="gallery-placeholder">
-                        <span class="placeholder-icon">🌄</span>
-                        <span>你的图片</span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3>添加你的照片</h3>
-                    <p>把图片放到 images/ 目录下即可</p>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="daily">
-                <div class="gallery-img" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                    <div class="gallery-placeholder">
-                        <span class="placeholder-icon">☕</span>
-                        <span>你的图片</span>
-                    </div>
-                </div>
-                <div class="gallery-info">
-                    <h3>添加你的照片</h3>
-                    <p>把图片放到 images/ 目录下即可</p>
-                </div>
-            </div>
+
+        <div class="letters-timeline" id="lettersTimeline">
+            <!-- 由 JS 动态渲染 -->
         </div>
     </section>
 
     <!-- ========== 关于 ========== -->
     <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-image">
-                <div class="about-img-placeholder">
-                    <span>👥</span>
-                </div>
-            </div>
-            <div class="about-text">
-                <span class="section-tag">About</span>
-                <h2>关于我们</h2>
-                <p>
-                    这里是「喜乐与苏晨」的小站。我们喜欢用照片记录生活，
-                    用文字分享心情。这个网站会陆续更新我们的旅行、
-                    日常和一切值得记住的瞬间。
-                </p>
-                <p>
-                    如果你也喜欢这些内容，欢迎常来看看～
-                </p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number" data-target="30">0</span>
-                        <span class="stat-label">照片</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="5">0</span>
-                        <span class="stat-label">旅行</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="1">0</span>
-                        <span class="stat-label">站点</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== 联系 ========== -->
-    <section class="contact" id="contact">
-        <div class="section-header">
-            <span class="section-tag">Contact</span>
-            <h2>联系</h2>
-            <p class="section-desc">欢迎来找我们玩</p>
-        </div>
-        <div class="contact-cards">
-            <a href="#" class="contact-card" target="_blank">
-                <div class="card-icon">📷</div>
-                <h3>Instagram</h3>
-                <p>@xiyueandsuchen</p>
-            </a>
-            <a href="#" class="contact-card" target="_blank">
-                <div class="card-icon">📱</div>
-                <h3>微信</h3>
-                <p>xiyue_suchen</p>
-            </a>
-            <a href="mailto:" class="contact-card">
-                <div class="card-icon">✉️</div>
-                <h3>邮件</h3>
-                <p>hello@xiyueandsuchen</p>
-            </a>
+        <div class="about-card">
+            <div class="about-icon">☁️</div>
+            <div class="section-tag">About</div>
+            <h2>关于我们</h2>
+            <p>
+                曦月 &amp; 苏晨，因<strong>光遇</strong>而相识的好朋友。
+            </p>
+            <p>
+                我们在这片天空之下一起跑图、一起玩耍、一起看风景。
+                这些信记录了我们之间的点点滴滴——
+                每一次相遇、每一次冒险、每一次欢笑。
+            </p>
+            <p class="about-sign">
+                致我们永远的好友 ✦
+            </p>
         </div>
     </section>
 
     <!-- ========== 页脚 ========== -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">✦ 喜乐与苏晨</span>
-                <p>记录生活 · 分享美好</p>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 喜乐与苏晨. Made with ❤️</p>
-            </div>
-        </div>
+        <p>✦ 曦月 &amp; 苏晨 · 光遇友情记 ✦</p>
+        <p class="footer-sub">在天空王国相遇的故事</p>
     </footer>
 
-    <!-- ========== 回到顶部按钮 ========== -->
-    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
-
-    <!-- ========== 图片灯箱 ========== -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">✕</button>
-        <div class="lightbox-content">
-            <div class="lightbox-image"></div>
+    <!-- ========== 信笺弹窗（点开信封后） ========== -->
+    <div class="letter-modal" id="letterModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-paper" id="modalPaper">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-header">
+                <span class="modal-date" id="modalDate"></span>
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 手写内容 + 照片 -->
+            </div>
         </div>
     </div>
 
