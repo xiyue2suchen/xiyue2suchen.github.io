@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>我家小猫🤓</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
+                <div class="letter-photo"><img src="images/cat.jpg" alt="苏晨家的小猫"></div>
             `
         },
         {
@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>哈哈哈哈哈其实是我刚放寒假那会儿一进门我就把他拽过来贴在手机拍的，他没有名字，一般我们说小猫过来，他就会过来<br>其实这个发照片也研究了一会儿才会的哈哈哈哈</p>
-<p>前几天吃的苹果，还蛮害羞的，都穿上衣服了🤣</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
+                <p>前几天吃的苹果，还蛮害羞的，都穿上衣服了🤣</p>
+                <div class="letter-photo"><img src="images/apple.jpg" alt="穿了衣服的苹果"></div>
             `
         },
         {
@@ -271,9 +271,17 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>Dear 月，</p>
-<p>下次上线躲猫猫活动没有结束的话我们拍这个吧👇<br>还可以用小不点魔法进水晶里面拍😁</p>
-<p>Best,<br>晨</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
+                <p>下次上线躲猫猫活动没有结束的话我们拍这个吧👇<br>还可以用小不点魔法进水晶里面拍😁</p>
+                <p>Best,<br>晨</p>
+                <div class="letter-photo"><img src="images/hideandseek.jpg" alt="躲猫猫"></div>
+                <div class="letter-photo"><img src="images/crystal_01.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_02.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_03.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_04.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_05.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_06.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_07.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_08.jpg" alt="水晶球"></div>
             `
         },
         {
@@ -284,7 +292,9 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>我画的猫😁👻👻👻👻👻(≧∇≦)/(ૢ˃ꌂ˂⁎)🤩🤩🤩🤩🤫🤫🤫🤫🤭🤭🤭🤭</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
+                <div class="letter-photo"><img src="images/catdrawing_01.jpg" alt="苏晨画的猫 - 素描1"></div>
+                <div class="letter-photo"><img src="images/catdrawing_02.jpg" alt="苏晨画的猫 - 素描2"></div>
+                <div class="letter-photo"><img src="images/catdrawing_03.jpg" alt="苏晨画的猫 - 素描3"></div>
             `
         },
         {
@@ -334,8 +344,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from">—— 来自 曦月 ——</div>
                 <p>羡慕了，感觉你真的应该当个画家哈哈哈哈</p>
 <p>这个生日礼物很用心了，对了，我记得你在去年12月22日的时候和我说过，你的生日是在7月份，具体的日期是多少号呀，客服告知在下😉</p>
-<p>等我有时候真的仔细找找，我以前画的两幅画，都是很久的时候画的了，我艺术天赋一般般其实，我之前甚至有一次闲来没有事手绘二维码哈哈哈哈哈哈，然后还能用手机扫出来~很神奇吧哈哈哈哈哈哈，不过总感觉那会儿精神不太正常，谁闲来无事手绘二维码呀哈哈哈哈哈哈哈</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
+                <p>等我有时候真的仔细找找，我以前画的两幅画，都是很久的时候画的了，我艺术天赋一般般其实，我之前甚至有一次闲来没有事手绘二维码哈哈哈哈哈哈，然后还能用手机扫出来~很神奇吧哈哈哈哈哈哈，不过总感觉那会儿精神不太正常，谁闲来无事手绘二维码呀哈哈哈哈哈哈哈</p>
+                <div class="letter-photo"><img src="images/xinjiang_01.jpg" alt="曦月拍的新疆喀什"></div>
+                <div class="letter-photo"><img src="images/xinjiang_02.jpg" alt="曦月拍的新疆喀什"></div>
+                <div class="letter-photo"><img src="images/xinjiang_03.jpg" alt="曦月拍的新疆喀什"></div>
             `
         },
         {
