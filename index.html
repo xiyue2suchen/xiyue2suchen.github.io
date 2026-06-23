@@ -19,8 +19,9 @@
         <div class="nav-container">
             <a href="#home" class="nav-logo">✦ 曦月 &amp; 苏晨</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#home">首页</a></li>
                 <li><a href="#letters">信笺</a></li>
+                <li><a href="#album">相册</a></li>
                 <li><a href="#about">关于</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="菜单">
@@ -71,6 +72,26 @@
 
         <div class="letters-timeline" id="lettersTimeline">
             <!-- 由 JS 动态渲染 -->
+        </div>
+    </section>
+
+    <!-- ========== 相册 ========== -->
+    <section class="album" id="album">
+        <div class="section-header">
+            <span class="section-tag">📷 Album</span>
+            <h2>相册</h2>
+            <p class="section-desc">我们的照片记忆</p>
+        </div>
+        <div class="album-book" id="albumBook">
+            <div class="book-page" id="bookPage">
+                <!-- JS 渲染 -->
+            </div>
+            <div class="book-nav">
+                <button class="book-nav-btn" id="bookPrev">‹</button>
+                <div class="book-dots" id="bookDots"></div>
+                <button class="book-nav-btn" id="bookNext">›</button>
+            </div>
+            <div class="book-counter" id="bookCounter"></div>
         </div>
     </section>
 

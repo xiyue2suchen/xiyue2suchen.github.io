@@ -495,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         navbar.classList.toggle('scrolled', window.scrollY > 50);
-        const sections = ['home', 'letters', 'about'];
+        const sections = ['home', 'letters', 'album', 'about'];
         let current = 'home';
         for (const id of sections) {
             const el = document.getElementById(id);
@@ -527,5 +527,88 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     renderEnvelopes();
-    console.log('☁️ 曦月 & 苏晨 — ' + lettersData.length + '封信笺已加载');
+
+    // ========================================
+    // 6. 相册翻页书
+    // ========================================
+    const albumPhotos = [
+        { src: 'images/cat.jpg', label: '🐱 苏晨家的小猫' },
+        { src: 'images/apple.jpg', label: '🍎 穿了衣服的苹果' },
+        { src: 'images/hideandseek.jpg', label: '🙈 躲猫猫' },
+        { src: 'images/catdrawing_01.jpg', label: '🎨 苏晨画的猫 (1)' },
+        { src: 'images/catdrawing_02.jpg', label: '🎨 苏晨画的猫 (2)' },
+        { src: 'images/catdrawing_03.jpg', label: '🎨 苏晨画的猫 (3)' },
+        { src: 'images/xinjiang_01.jpg', label: '🏔️ 曦月拍的新疆喀什' },
+        { src: 'images/xinjiang_02.jpg', label: '🏔️ 喀什街景' },
+        { src: 'images/xinjiang_03.jpg', label: '🏔️ 新疆风光' },
+        { src: 'images/crystal_01.jpg', label: '🔮 水晶球 (1)' },
+        { src: 'images/crystal_02.jpg', label: '🔮 水晶球 (2)' },
+        { src: 'images/crystal_03.jpg', label: '🔮 水晶球 (3)' },
+        { src: 'images/crystal_04.jpg', label: '🔮 水晶球 (4)' },
+        { src: 'images/crystal_05.jpg', label: '🔮 水晶球 (5)' },
+        { src: 'images/crystal_06.jpg', label: '🔮 水晶球 (6)' },
+        { src: 'images/crystal_07.jpg', label: '🔮 水晶球 (7)' },
+        { src: 'images/crystal_08.jpg', label: '🔮 水晶球 (8)' },
+        { src: 'images/food.jpg', label: '🍜 美食（来自乱码邮件）' },
+    ];
+
+    let currentPage = 0;
+    const bookPage = document.getElementById('bookPage');
+    const bookDots = document.getElementById('bookDots');
+    const bookPrev = document.getElementById('bookPrev');
+    const bookNext = document.getElementById('bookNext');
+    const bookCounter = document.getElementById('bookCounter');
+
+    function renderAlbumPage(index) {
+        const photo = albumPhotos[index];
+        bookPage.innerHTML = `
+            <img src="${photo.src}" alt="${photo.label}" loading="lazy">
+            <div class="book-page-label">${photo.label}</div>
+        `;
+        bookCounter.textContent = `${index + 1} / ${albumPhotos.length}`;
+        bookDots.querySelectorAll('.book-dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        bookPrev.style.opacity = index === 0 ? '0.3' : '1';
+        bookNext.style.opacity = index === albumPhotos.length - 1 ? '0.3' : '1';
+    }
+
+    function goToPage(index) {
+        if (index < 0 || index >= albumPhotos.length) return;
+        bookPage.classList.add('flipping');
+        setTimeout(() => {
+            currentPage = index;
+            renderAlbumPage(index);
+            bookPage.classList.remove('flipping');
+        }, 200);
+    }
+
+    // Render dots
+    for (let i = 0; i < albumPhotos.length; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'book-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goToPage(i));
+        bookDots.appendChild(dot);
+    }
+
+    // Initial render
+    renderAlbumPage(0);
+
+    // Navigation
+    bookPrev.addEventListener('click', () => goToPage(currentPage - 1));
+    bookNext.addEventListener('click', () => goToPage(currentPage + 1));
+
+    // Keyboard
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goToPage(currentPage - 1);
+        if (e.key === 'ArrowRight') goToPage(currentPage + 1);
+    });
+
+    // Touch / click on photo
+    bookPage.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'IMG' && !e.target.closest('.book-page-label')) return;
+        goToPage(currentPage + 1);
+    });
+
+    console.log('☁️ 曦月 & 苏晨 — ' + lettersData.length + '封信笺 + ' + albumPhotos.length + '张照片已加载');
 });

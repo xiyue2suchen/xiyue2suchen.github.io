@@ -554,6 +554,125 @@ body {
     text-indent: 0;
 }
 
+/* ========== 相册书 ========== */
+.album {
+    position: relative;
+    z-index: 1;
+    padding: 100px 24px;
+    background: rgba(250,243,224,0.04);
+}
+
+.album-book {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.book-page {
+    position: relative;
+    background: var(--paper);
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3), inset 0 0 60px rgba(212,168,83,0.04);
+    padding: 24px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.book-page.flipping {
+    transform: rotateY(10deg) scale(0.98);
+    opacity: 0.6;
+}
+
+.book-page img {
+    max-width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.book-page-label {
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    letter-spacing: 1px;
+    font-family: var(--font-body);
+}
+
+.book-page-multi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+.book-page-multi img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.book-nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(212,168,83,0.3);
+    background: transparent;
+    color: var(--gold-light);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-nav-btn:hover {
+    background: rgba(212,168,83,0.15);
+    border-color: var(--gold);
+}
+
+.book-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.book-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.book-dot.active {
+    background: var(--gold);
+    transform: scale(1.3);
+}
+
+.book-counter {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 2px;
+}
+
 /* ========== 关于 ========== */
 .about {
     position: relative;
