@@ -534,6 +534,17 @@ body {
     text-indent: 0;
 }
 
+.modal-body .letter-from {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(61,50,41,0.12);
+    text-indent: 0;
+}
+
 .modal-body .letter-sign {
     text-align: right;
     margin-top: 24px;

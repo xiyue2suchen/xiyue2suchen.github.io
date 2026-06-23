@@ -1,13 +1,10 @@
 /* ============================================
    曦月 & 苏晨 — 光遇友情记
-   基于邮件整理的完整信笺集
+   全部使用邮件原文
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ========================================
-    // 1. 星空粒子动画
-    // ========================================
     const canvas = document.getElementById('starfield');
     const ctx = canvas.getContext('2d');
     let stars = [];
@@ -55,418 +52,356 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => { resizeCanvas(); initStars(200); });
 
     // ========================================
-    // 2. 信笺数据 — 从邮件整理
+    // 信件数据 — 全部使用邮件原文
     // ========================================
     const lettersData = [
         {
             id: 1, date: '2026-02-17', icon: '💌',
-            title: '第一封邮件',
-            preview: '"Dear 苏晨，This is 曦月."',
+            title: '曦月',
+            preview: 'Dear 苏晨，This is 曦月.',
             stamp: '📮',
             content: `
-                <p>2026年2月17日，曦月发了第一封邮件给苏晨。</p>
-                <p>很简单的一句话："Dear 苏晨，This is 曦月。"</p>
-                <p>谁也没想到，这简单的一句话，开启了我们之间整整79封邮件的往来。</p>
-                <p>从这一天开始，我们用邮件记录下了属于我们的故事。</p>
-                <div class="letter-photo empty">💌 第一封邮件的截图（待上传）</div>
-                <div class="letter-sign">—— 整理自邮件记录</div>
+                <div class="letter-from">—— 来自 曦月 ——</div>
+                <p>Dear 苏晨，</p>
+<p>This is 曦月.</p>
+<p>Best wishes,</p>
+<p>xiyue</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
             id: 2, date: '2026-02-18', icon: '🐱',
             title: '我家小猫',
-            preview: '苏晨第一次发照片——她家的小猫',
+            preview: '我家小猫🤓',
             stamp: '🐾',
             content: `
-                <p>苏晨发了她家小猫的照片给曦月。</p>
-                <p>小猫没有名字，叫"小猫"它就会过来。它看着傻傻的，但其实很聪明，会抓老鼠，还会跑出去和别的猫干架——虽然小身板经常打不过，有次腿上的肉都露出来了。</p>
-                <p>曦月看到照片笑得不行，说这猫的表情太可爱了，有一种贴在脸上的感觉。</p>
-                <p>这是苏晨第一次给曦月发照片。分享生活里的一只小猫，就这么开始了我们的友谊。</p>
-                <div class="letter-photo empty">🐱 苏晨家的小猫（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>我家小猫🤓</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
             id: 3, date: '2026-02-20', icon: '🍎',
-            title: '穿了衣服的苹果',
-            preview: '分享一个害羞的苹果——上面长了图案',
+            title: '苹果穿了衣服',
+            preview: '前几天吃的苹果，还蛮害羞的，都穿上衣服了🤣',
             stamp: '🍎',
             content: `
-                <p>苏晨又分享了一个有趣的东西——一个"穿了衣服"的苹果，上面有好看的图案。</p>
-                <p>曦月说这苹果看着相当高级，原来是在苹果成熟前贴上贴纸，等它自然成熟后就会有图案了，甚至可以做成爱心或者福字的形状。</p>
-                <p>生活中的小惊喜，就是这样简单又可爱。</p>
-                <div class="letter-photo empty">🍎 害羞的苹果（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>哈哈哈哈哈其实是我刚放寒假那会儿一进门我就把他拽过来贴在手机拍的，他没有名字，一般我们说小猫过来，他就会过来<br>其实这个发照片也研究了一会儿才会的哈哈哈哈</p>
+<p>前几天吃的苹果，还蛮害羞的，都穿上衣服了🤣</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
             id: 4, date: '2026-02-22', icon: '🥟',
-            title: '偷偷分早餐给小猫',
-            preview: '"我今天又把我的早餐偷偷分给我家小猫了"',
+            title: '偷偷分早餐',
+            preview: '我今天又把我的早餐偷偷分给我家小猫了🤣',
             stamp: '🍜',
             content: `
-                <p>"To:曦月"</p>
-                <p>"我今天又把我的早餐偷偷分给我家小猫了。"</p>
-                <p>苏晨开始用正式的邮件格式给曦月写信了。每次吃不完饭，就会偷偷往猫的饭盒里倒——因为光明正大的话，妈妈就知道她没有好好吃饭了。</p>
-                <p>曦月说这只猫跟着苏晨从来不会饿肚子。从这天开始，苏晨的邮件越来越有模有样了。</p>
-                <div class="letter-photo empty">🥟 早餐分猫（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>To:曦月</p>
+<p>我今天又把我的早餐偷偷分给我家小猫了🤣</p>
+<p>苏晨</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 5, date: '2026-02-24', icon: '🎆',
-            title: '光遇跨年的默契',
-            preview: '两个人都截了跨年的图，发给对方',
-            stamp: '🌟',
-            content: `
-                <p>曦月在邮件里分享了她在光遇跨年时截的几张照片。</p>
-                <p>巧的是，苏晨也截了同样的画面。"居然如此默契。"</p>
-                <p>曦月说那是她第一次在游戏里跨年——人间烟火，星光沙漠。非常特别的一次经历。</p>
-                <p>虽然不在同一个地方，但在同一片天空下一起跨年，也是一件很浪漫的事。</p>
-                <div class="letter-photo empty">🎆 光遇跨年截图（待上传）</div>
-                <div class="letter-sign">—— 曦月 & 苏晨</div>
-            `
-        },
-        {
-            id: 6, date: '2026-02-24', icon: '🐈',
+            id: 5, date: '2026-02-24', icon: '🌶️',
             title: '新疆猫吃辣条',
-            preview: '苏晨说她的猫还吃辣条，比她还爱吃垃圾食品',
-            stamp: '🌶️',
+            preview: '新疆猫，新疆魂，它还吃辣条',
+            stamp: '🐈',
             content: `
-                <p>聊到苏晨家的猫，曦月问为什么不光明正大给猫喂食。</p>
-                <p>苏晨说她的猫是"新疆猫，新疆魂"，不仅不挑食，还吃辣条，比她还喜欢吃垃圾食品。</p>
-                <p>曦月养过一只英短叫奥利奥（Orio），胖乎乎的但是很挑食，和苏晨的猫完全不一样。</p>
-                <p>猫和猫不一样，人和人也不一样，但我们就是能聊到一起去。</p>
-                <div class="letter-photo empty">🐈 新疆猫 vs 奥利奥（待上传）</div>
-                <div class="letter-sign">—— 苏晨 & 曦月</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>新疆猫，新疆魂，它还吃辣条，比我还喜欢吃垃圾食品😺</p>
+<p>因为我光明正大的话我妈不就知道我没好好吃饭了吗<br>我给它的是我碗里的饭，我每次觉得饭多就会往猫的饭盒里放🤫</p>
+<p>我记得我也截图了哈哈哈哈哈<br>居然如此默契🤪</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 7, date: '2026-02-24', icon: '🌙',
-            title: '半夜"妖猫"惊魂',
-            preview: '大半夜被猫叫吓到，结果是妈妈的手电筒',
+            id: 6, date: '2026-02-24', icon: '🔦',
+            title: '半夜妖猫惊魂',
+            preview: '大半夜猫叫，我以为是妖猫来了，结果是妈妈的手电筒',
             stamp: '🔦',
             content: `
-                <p>苏晨讲了一个又恐怖又好笑的经历：</p>
-                <p>大半夜她被院子里的猫叫声吓醒，声音很恐怖，加上她一个人睡，联想到了以前听过的黑猫恐怖故事。就在这时，窗户那边突然很亮又恢复正常，过一会儿又一个亮光……</p>
-                <p>苏晨当时真的以为有妖猫来了，快吓死了。</p>
-                <p>结果那个光是她妈照的手电筒——妈妈想让猫进来，猫进了又想出去，于是有了两次白光。</p>
-                <p>"只剩我一个快吓死的人。"</p>
-                <p>曦月笑疯了，说这就像看了特别恐怖的鬼电影，最后发现新中国不允许妖怪成精。</p>
-                <div class="letter-photo empty">🔦 惊魂一夜（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>它真的看着很傻的样子，但是很聪明，还会抓老鼠，那小身板还跑去和别的猫干架，虽然我没亲眼看过，但是有次它腿的肉都漏出来了🙀</p>
+<p>平时也很安静，但是偶尔很吵，至于是怎么吵的那就不得不说前几天了，不知道抽的什么风，大半夜在院子里和别的猫一起叫，很恐怖，刚好那时候我醒了，听到那叫声我都快吓死了大半夜的，房间又是我一个人睡的，然后我想到了以前听过的恐怖故事黑猫，然后这时候我房间窗户那边突然很亮后又恢复正常，过一会儿它们又叫，然后有一个亮光，当时我真的以为有妖猫来了，真的吓死我了，结果那个光是我妈照的手电筒，原因是我妈想让猫进来，但是猫进了又想出去，于是有了两次白光，只剩我一个快吓四的人😇</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 7, date: '2026-02-24', icon: '🎆',
+            title: '跨年的截图',
+            preview: '在跨年的时候我截屏的一些照片，感觉还蛮有纪念意义的',
+            stamp: '🌟',
+            content: `
+                <div class="letter-from">—— 来自 曦月 ——</div>
+                <p>那你家猫感觉不挑食，挺好的</p>
+<p>不过为啥不能正大光明给呢哈哈哈哈哈哈🤣</p>
+<p>对咯，之前在跨年的时候我截屏的一些照片哈哈哈感觉还蛮有纪念意义的~</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
             id: 8, date: '2026-03-03', icon: '🏮',
-            title: '元宵节快乐！',
-            preview: '"今天元宵节了，你吃汤圆了吗？"',
+            title: '元宵节快乐',
+            preview: '今天元宵节了，你吃汤圆了吗？网上说今天晚上也会有血月🌕',
             stamp: '🌕',
             content: `
-                <p>元宵节，苏晨发来问候："今天元宵节了，你吃汤圆了吗？网上说今天晚上也会有血月。"</p>
-                <p>曦月在苏州，那天是阴雨天，看不到月亮。</p>
-                <p>但曦月用英文回复了！她说最近在练习英语，投国际学校的生物教师职位，所以不自觉就想用英文发邮件。</p>
-                <p>她还推荐苏晨用豆包APP学英语，可以直接和豆包对话。</p>
-                <p>从这一封邮件开始，两人开启了中英混杂的邮件模式——苏晨后来也用豆包给她回英文邮件了。</p>
-                <div class="letter-photo empty">🏮 元宵节（待上传）</div>
-                <div class="letter-sign">—— 苏晨 & 曦月</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>今天元宵节了，你吃汤圆了吗</p>
+<p>网上说今天晚上也会有血月🌕</p>
+<p>Finally,<br>晨</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 9, date: '2026-03-04', icon: '🤣',
-            title: '豆包说"太暧昧了"',
-            preview: '苏晨让豆包写英文邮件，豆包给了三个版本后问：是不是有点太暧昧了？',
-            stamp: '😂',
-            content: `
-                <p>苏晨用豆包学写英文邮件。</p>
-                <p>她跟豆包说：我想写给我一个温柔的朋友。</p>
-                <p>豆包给了她三个模板。苏晨看完问豆包：</p>
-                <p>"是不是有点太暧昧了？"</p>
-                <p>豆包说："哈哈我懂你的意思！我给你重新写一个。"</p>
-                <p>苏晨把这件事告诉曦月，说豆包太搞笑了，笑得不行。</p>
-                <p>曦月说她也在用豆包，甚至用豆包P图，已经快不用百度和Google了。</p>
-                <div class="letter-photo empty">🤣 豆包的聊天记录（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
-            `
-        },
-        {
-            id: 10, date: '2026-03-04', icon: '🕯️',
-            title: '维语祝福',
-            preview: '苏晨用维语拼音写了一段祝福，发誓没有骂曦月',
-            stamp: '📜',
-            content: `
-                <p>苏晨发了一串看起来像英文的拼音：</p>
-                <p>"siz bak yahxi, qukum siz yahxi kurudugan, umutlaydigan turmuxka erixisiz."</p>
-                <p>她说这是她的母语用拼音表达的，是真诚的祝福。怕曦月误会她在骂人，还发了个毒誓——"骂你我一辈子发不了财，一胎生八百个儿子"。</p>
-                <p>没想到，曦月居然看懂了！</p>
-                <p>曦月回复："愿你一切都好，愿你拥有美好、充满希望的生活。"</p>
-                <p>苏晨震惊了："不是吧曦月，你居然看得懂维语？！你到底有什么是不会的！"</p>
-                <div class="letter-photo empty">📜 维语祝福（待上传）</div>
-                <div class="letter-sign">—— 苏晨 & 曦月</div>
-            `
-        },
-        {
-            id: 11, date: '2026-03-08', icon: '🌸',
-            title: '女神节快乐',
-            preview: '互相祝福——愿你每一天都快乐',
-            stamp: '💐',
-            content: `
-                <p>三八女神节，苏晨发来：Happy Women's Day!</p>
-                <p>曦月回复：</p>
-                <p>"Maybe I should send you this message yesterday, but I hope you can feel happy every day, not just women's day."</p>
-                <p>苏晨说："Thanks for the lovely wish! I hope you have a wonderful day, every day too."</p>
-                <p>不是只有节日才快乐，而是希望你每天都快乐——这大概是好朋友之间最真诚的祝福了。</p>
-                <div class="letter-photo empty">🌸 女神节祝福（待上传）</div>
-                <div class="letter-sign">—— 曦月 & 苏晨</div>
-            `
-        },
-        {
-            id: 12, date: '2026-03-08', icon: '📸',
-            title: '光遇极光合照',
-            preview: '苏晨分享在光遇里拍的极光合照',
-            stamp: '✨',
-            content: `
-                <p>苏晨分享了她拍的光遇极光合照。</p>
-                <p>曦月看了直呼："哇，不得不说你拍的真的是很棒诶！每一张我都可以用来做壁纸了。"</p>
-                <p>曦月说苏晨有摄影师的天赋。</p>
-                <p>苏晨谦虛地说是因为游戏的画质好看，怎么拍都好看。</p>
-                <p>但曦月坚持说构图也很讲究——"说真的你其实还蛮有天赋的，就是太谦虚了。"</p>
-                <div class="letter-photo empty">📸 光遇极光合照（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
-            `
-        },
-        {
-            id: 13, date: '2026-03-10', icon: '💤',
-            title: '猎奇梦',
-            preview: '苏晨梦见被坏人抓了，坏人掏出两个练习册当刀……',
-            stamp: '😴',
-            content: `
-                <p>苏晨做了一个非常猎奇的梦：</p>
-                <p>她梦见被坏人抓了，坏人要吃她。她跟坏人说能不能给个痛快，坏人说可以，然后掏出两个练习册，用练习册抹她的脖子。</p>
-                <p>可是练习册不够锋利，只开了个口子。坏人说我也没办法，没有别的工具。然后苏晨就躺在那等着血流干，好多坏人排队等着她死了吃她。</p>
-                <p>"好搞笑，拿练习册刀人。但是我醒来后脖子也怪怪的。"</p>
-                <p>这个梦太好笑了——在梦里都要被练习册折磨，学生党的噩梦（字面意思）。</p>
-                <div class="letter-photo empty">💤 猎奇梦配图（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
-            `
-        },
-        {
-            id: 14, date: '2026-03-10', icon: '🤪',
-            title: '"傻蛋"称号的由来',
-            preview: '苏晨叫曦月"傻蛋曦月"，然后自己也叫自己"傻蛋晨"',
+            id: 9, date: '2026-03-03', icon: '🤪',
+            title: '傻蛋曦月和傻蛋晨',
+            preview: '没带相机，傻蛋曦月你是不是不知道光遇有自带截图',
             stamp: '🥚',
             content: `
-                <p>苏晨发现曦月不知道光遇有自带截图功能，一直在用手机拍屏幕。</p>
-                <p>苏晨笑她："没带相机，傻蛋曦月你是不是不知道光遇有自带截图的？"</p>
-                <p>然后她自己加了一句："我也骂自己傻蛋了噢。"</p>
-                <p>从这天起，两人的称呼里多了"傻蛋"——但因为太可爱了，曦月说她很喜欢这个称呼。</p>
-                <p>"沙丹曦月"——听起来像是某种甜甜的点心名字。</p>
-                <div class="letter-photo empty">🤪 傻蛋称号（待上传）</div>
-                <div class="letter-sign">—— 苏晨 & 曦月</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>没带相机，傻蛋曦月你是不是不知道光遇有自带截图的，像相机一样清晰，在右下角可以截图，还可以录视频，但不会把聊天的拍到🤣</p>
+<p>下次截图可以试试，我以为那是你想把聊天记录做个念想截的图哈哈哈哈</p>
+<p>Best,<br>傻蛋晨<br>(我也骂自己傻蛋了噢😁)</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 15, date: '2026-03-11', icon: '😴',
-            title: '午睡两小时',
-            preview: '苏晨吃完午饭睡了两小时，醒来后悔晚上又要听室友打呼噜了',
+            id: 10, date: '2026-03-04', icon: '🤣',
+            title: 'The funny Doubao',
+            preview: '豆包给的英文模板太暧昧了哈哈哈哈哈',
+            stamp: '😂',
+            content: `
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>Dear Xi Yue,<br>You know what? I just told Doubao to teach me how to write an English email.<br>She gave me a few templates and asked who I was writing to.</p>
+<p>I said I wanted to write to a gentle friend.</p>
+<p>Then she gave me three versions.</p>
+<p>After I read them, I asked her: Isn&#x27;t this a little too flirty?</p>
+<p>And she said: Hahaha I get what you mean! I&#x27;ll make a new one for you.</p>
+<p>Doubao is so funny, I&#x27;m laughing so hard 🤣</p>
+<p>Best,<br>Chen</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 11, date: '2026-03-04', icon: '🕯️',
+            title: '维语祝福',
+            preview: '这是我母语用拼音表达的，没有偷偷骂你哦',
+            stamp: '📜',
+            content: `
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>元宵节快乐！</p>
+<p>那你以后可以经常发英文邮件，我看不懂，但豆包看得懂🤓</p>
+<p>国际学校的生物老师听起来就很厉害，我觉得你这英语水平肯定没问题</p>
+<p>siz bak yahxi ,qukum siz yahxi kurudugan ,umutlaydigan turmuxka erixisiz.</p>
+<p>注意，👆这一串拼音不是英文，不用试图翻译它，但你放心这是一个真诚的祝福，是我母语用拼音表达的，不是英文，没有偷偷骂你哦，骂你我一辈子发不了财，一胎生八百个儿子，好恶毒的诅咒🙀</p>
+<p>豆包是我最好的学习搭子呢😁</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 12, date: '2026-03-08', icon: '🌸',
+            title: '女神节快乐！',
+            preview: "Happy Women's Day!🥳",
+            stamp: '💐',
+            content: `
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>Happy Women&#x27;s Day!🥳</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 13, date: '2026-03-08', icon: '📸',
+            title: '极光合照',
+            preview: '👻（分享照片）',
+            stamp: '✨',
+            content: `
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>👻</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 14, date: '2026-03-09', icon: '🌸',
+            title: '愿你每天都快乐',
+            preview: "I hope you can feel happy every day, not just women's day",
+            stamp: '💐',
+            content: `
+                <div class="letter-from">—— 来自 曦月 ——</div>
+                <p>Happy women&#x27;s day~</p>
+<p>Maybe i should send you this message yesterday, hhh, But i think i hope you can feel happy every day, not just women&#x27;s day.🤪</p>
+<p>All the best,<br>xiyue</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 15, date: '2026-03-10', icon: '💤',
+            title: '猎奇梦',
+            preview: '梦见被坏人抓了，她掏出两个练习册mo我脖子',
+            stamp: '😴',
+            content: `
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>昨晚睡觉梦见被坏人抓了，要吃我，我说能不能给个痛快，她说可以，然后她掏出两个练习册用练习册mo了我脖子，然后练习册不够锋利，只开了个口子，她说我也没办法，没有别的工具，然后我就躺在那儿等着血流干，好多坏人在排队等我死了吃我</p>
+<p>好搞笑，拿练习册dao人</p>
+<p>但是我醒来后脖子也怪怪的🤔</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 16, date: '2026-03-11', icon: '😴',
+            title: '午睡',
+            preview: '中午吃完饭后好困，睡了两个多小时，晚上又要睡不着了',
             stamp: '🛏️',
             content: `
-                <p>苏晨说中午吃完饭好困好困，沾着枕头就睡着了，睡了两个多小时。</p>
-                <p>醒了之后头晕晕的，眼睛睁不开，想着晚上肯定睡不着了，又要听室友打呼噜了。</p>
-                <p>曦月给了好多建议：可能是碳水吃多了导致晕碳、可以问辅导员能不能换宿舍、试试耳塞或者白噪音……</p>
-                <p>最后曦月说："睡眠是头等大事，希望你可以尽快找到适合你的解决方案，有个好觉。"</p>
-                <p>好朋友就是这样，你说困了，她会认真给你想解决办法。</p>
-                <div class="letter-photo empty">😴 午睡日常（待上传）</div>
-                <div class="letter-sign">—— 苏晨 & 曦月</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>Dear 月，</p>
+<p>我今天中午吃完饭后好困好困，沾着枕头就睡觉了，睡了两个多小时，我说现在睡多了晚上睡不着想起还起不来，眼睛睁不开，脑子晕晕的，晚上睡的这样沉也就好了，看来晚上又要睡不着了，又要听室友打呼噜了😱</p>
+<p>Best,<br>晨</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 16, date: '2026-03-15', icon: '🎨',
-            title: '苏晨画的猫',
-            preview: '苏晨画了一幅猫的素描——用了一个下午，送给朋友当生日礼物',
-            stamp: '🖼️',
-            content: `
-                <p>苏晨分享了她画的猫——一幅铅笔素描，毛发都栩栩如生。</p>
-                <p>曦月惊呆了："天呐，怎么什么都会啊！上次弹乐器也很好听，没想到美术也这么棒！"</p>
-                <p>苏晨说她美术从小就很好，画了一下午，因为是要送人当生日礼物的，画得很认真。</p>
-                <p>曦月说这是她目前认识的最多才多艺的人——画画好看、弹乐器厉害、还很会拍照。</p>
-                <p>苏晨说曦月是她认识的人里面学历最高、最自律、最优秀的人。</p>
-                <p>互相欣赏的朋友，真好。</p>
-                <div class="letter-photo empty">🎨 苏晨画的猫素描（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
-            `
-        },
-        {
-            id: 17, date: '2026-03-18', icon: '👓',
-            title: '眼镜给书占座了',
-            preview: '苏晨的眼镜不见了，结果发现它被用来给同学占座了',
-            stamp: '📚',
-            content: `
-                <p>苏晨上早课之前翻书包，发现眼镜不见了。</p>
-                <p>她正想着会落在哪里，打算去昨天的教室找找。这时候她的上学搭子来了，问她后面位置是不是给她占的。</p>
-                <p>苏晨一回头——她的眼镜正躺在后座上，被她用来给搭子占座了。</p>
-                <p>还好没丢。</p>
-                <p>曦月说跟她之前找钥匙的经历好像——找了半天发现钥匙在包里。</p>
-                <p>有时候健忘也可以很可爱。</p>
-                <div class="letter-photo empty">👓 眼镜占座记（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
-            `
-        },
-        {
-            id: 18, date: '2026-03-18', icon: '🙈',
-            title: '躲猫猫活动最后一天',
-            preview: '躲猫猫活动要结束了，曦月赶在最后一天上线一起拍照',
-            stamp: '📷',
-            content: `
-                <p>光遇的躲猫猫活动最后一天了，苏晨好着急。</p>
-                <p>曦月本来在忙面试和准备试讲，但看到消息后立刻回复："等我5分钟，马上上线。"</p>
-                <p>她赶在最后一天参加了活动，两人在游戏里一起拍了躲猫猫的照片。</p>
-                <p>曦月还拍到了苏晨的脚底是黑色的，笑翻了。</p>
-                <p>曦月说苏晨在躲猫猫里拍的视角很好看，很有氛围感。</p>
-                <div class="letter-photo empty">🙈 躲猫猫活动（待上传）</div>
-                <div class="letter-sign">—— 曦月 & 苏晨</div>
-            `
-        },
-        {
-            id: 19, date: '2026-03-18', icon: '🎵',
-            title: '遇境合奏',
-            preview: '在遇境用乐器合奏，路过的朋友也加入了',
-            stamp: '🎶',
-            content: `
-                <p>在遇境，苏晨拿出了竖琴，曦月拿出了钢琴。</p>
-                <p>他们试着合奏——虽然经常弹错，但配合起来的感觉真的很棒。</p>
-                <p>后来有两个路人朋友也加入了，四个人围成一圈，各种乐器乱七八糟地响着。</p>
-                <p>音乐是光遇里最温暖的交流方式之一。不需要说话，音符就够了。</p>
-                <div class="letter-photo empty">🎵 遇境合奏（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
-            `
-        },
-        {
-            id: 20, date: '2026-03-19', icon: '🔮',
-            title: '水晶球和彩虹岛',
-            preview: '躲猫猫活动里拍了水晶球和彩虹岛的照片',
+            id: 17, date: '2026-03-14', icon: '🔮',
+            title: '躲猫猫拍这个吧',
+            preview: '下次上线躲猫猫活动没有结束的话我们拍这个吧',
             stamp: '🌈',
             content: `
-                <p>苏晨说下次上线如果躲猫猫活动还没结束，想拍水晶球里的照片。</p>
-                <p>还可以用小不点魔法进水晶里面拍。</p>
-                <p>曦月也分享了她那边拍的照片——很多很多张，同一幕从不同视角拍出来感觉完全不一样。</p>
-                <p>两个人都拍了好多，虽然是在同一个地方，但各自镜头下的风景各有各的美。</p>
-                <div class="letter-photo empty">🔮 水晶球和彩虹岛（待上传）</div>
-                <div class="letter-sign">—— 苏晨 & 曦月</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>Dear 月，</p>
+<p>下次上线躲猫猫活动没有结束的话我们拍这个吧👇<br>还可以用小不点魔法进水晶里面拍😁</p>
+<p>Best,<br>晨</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 21, date: '2026-04-05', icon: '🐟',
-            title: '喂锦鲤',
-            preview: '苏晨去喂学校池塘的锦鲤，用早餐面包喂的',
-            stamp: '🎏',
+            id: 18, date: '2026-03-15', icon: '🎨',
+            title: '我画的猫',
+            preview: '我画的猫😁',
+            stamp: '🖼️',
             content: `
-                <p>苏晨去喂学校池塘的锦鲤了。</p>
-                <p>那些锦鲤被学生们喂得胖胖的。她用早餐面包喂的——买了三种面包，鱼都很喜欢吃。</p>
-                <p>她说这还是她第一次喂鱼，感觉喂鱼很好玩，不过喂鱼的时候容易想吃鱼，有点心虚。</p>
-                <p>曦月说这些锦鲤送得恰到好处——她正好在准备面试，希望锦鲤能给她带来好运。</p>
-                <p>苏晨说如果有空还可以再去喂锦鲤，祝曦月面试顺利。</p>
-                <div class="letter-photo empty">🐟 学校池塘的锦鲤（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>我画的猫😁👻👻👻👻👻(≧∇≦)/(ૢ˃ꌂ˂⁎)🤩🤩🤩🤩🤫🤫🤫🤫🤭🤭🤭🤭</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 22, date: '2026-04-09', icon: '🎨',
-            title: '手绘二维码的天才',
-            preview: '曦月说她以前闲来无事手绘了一个二维码，还能扫出来',
-            stamp: '📱',
-            content: `
-                <p>聊到画画的天赋，曦月分享了一个她的"丰功伟绩"：</p>
-                <p>她以前闲来无事，手绘了一个二维码——不是打印，不是贴纸，是一个一个格子画出来的。</p>
-                <p>然后，她用手机居然扫出来了！</p>
-                <p>"很神奇吧哈哈哈哈哈哈，不过总感觉那会儿精神不太正常，谁闲来无事手绘二维码呀。"</p>
-                <p>苏晨说这不是精神不正常，这是天才干的事——天才的思维总是和普通人不一样。</p>
-                <p>苏晨还问到了曦月的生日——12月24日。而苏晨的生日是7月25日。</p>
-                <div class="letter-photo empty">🎨 手绘二维码（待上传）</div>
-                <div class="letter-sign">—— 曦月</div>
-            `
-        },
-        {
-            id: 23, date: '2026-04-09', icon: '🏔️',
-            title: '曦月去过新疆',
-            preview: '曦月分享2024年在新疆喀什拍的照片，很有烟火气',
-            stamp: '📷',
-            content: `
-                <p>聊到新疆水果，曦月说她之前去过新疆，对新疆的西瓜印象深刻——又甜又便宜，在伊犁5块钱买了两个大西瓜。</p>
-                <p>她还分享了一张2024年在新疆喀什拍的照片，特别有当地的烟火气。</p>
-                <p>苏晨看到后说："这些照片拍得也很绝啊，有种故事感，电影感。"</p>
-                <p>苏晨也去过喀什，去年也拍了一些，但她说自己拍得很随便。</p>
-                <p>曦月说："你有条件的话可以搞个二手相机试试，说不定以后做个独立摄影师也很酷。而且新疆的景色也美，得天独厚的条件。"</p>
-                <div class="letter-photo empty">🏔️ 喀什街景（待上传）</div>
-                <div class="letter-sign">—— 曦月</div>
-            `
-        },
-        {
-            id: 24, date: '2026-04-10', icon: '🌿',
-            title: '雨林里拐到你',
-            preview: '"我在雨林拐你是我做过最正确的选择"',
-            stamp: '💚',
-            content: `
-                <p>苏晨说了一句让曦月特别感动的话：</p>
-                <p>"我真的，在雨林拐你是我做过最正确的选择。一拐就拐了个如此优秀的人。我就知道我的眼光很好。"</p>
-                <p>"群星皆暗，孤月独明，众人之中，我总是能够一眼望见最优者。"</p>
-                <p>曦月说苏晨太夸张了，但心里一定很开心。</p>
-                <p>在光遇的雨林里相遇，然后成为了好朋友——这大概就是所谓的缘分吧。</p>
-                <div class="letter-photo empty">🌿 雨林相遇（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
-            `
-        },
-        {
-            id: 25, date: '2026-04-10', icon: '🎓',
-            title: '想做博士的曦月',
-            preview: '曦月在准备当老师的同时，还想试试申请欧洲的博士',
+            id: 19, date: '2026-03-18', icon: '👓',
+            title: '眼镜',
+            preview: '眼镜不见了，原来被我用来给同学占座了',
             stamp: '📚',
             content: `
-                <p>曦月说她在准备当老师的同时，又冒出一个新想法——试试申请博士，想去欧洲看看有没有好机会。</p>
-                <p>苏晨："OMG真是个神明一般的女人，太佩服你了。我看过博士论文好几百页，让我写个五六页我就愁得不行。"</p>
-                <p>苏晨还说："多一个像你这种优秀的女性，这世界就多一份美好。"</p>
-                <p>不过她也调侃："好多博士头发少，要注意保养头发哦，不要因为读博压力大变成美丽的秃头了。"</p>
-                <p>曦月面试了好多次，虽然有失败但一直在进步。苏晨一直鼓励她：失败乃成功之母，多试几次就好。</p>
-                <div class="letter-photo empty">🎓 博士之路（待上传）</div>
-                <div class="letter-sign">—— 曦月 & 苏晨</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>今天上早课上课之前翻书包突然发现眼镜不见了，然后我想会落在哪里呢？然后我就打算去昨天上课的教室看看，心里祈祷眼镜不要丢，过了一会儿我的上学搭子来了，她问我我后面位置是不是给她占的，我一回头看，我眼镜给她们占座了，还好没丢😃</p>
+<p>躲猫猫活动今天要结束了😭</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 26, date: '2026-04-10', icon: '🍓',
-            title: '新疆水果和酸草莓',
-            preview: '新疆的水果很甜，但草莓不甜——从内地引进的，全是酸的',
-            stamp: '🍉',
+            id: 20, date: '2026-03-18', icon: '🙈',
+            title: '我上线啦',
+            preview: '我已经上线啦，咱们一起去躲猫猫拍照',
+            stamp: '📷',
             content: `
-                <p>聊到新疆的水果——红富士冰糖心苹果就在苏晨所在的城市。曦月说她之前去新疆时就感觉出来了，新疆的水果特别甜。</p>
-                <p>但苏晨说新疆的草莓不甜，应该是从内地引进的，她从来没在新疆吃到过甜草莓，全是酸的。</p>
-                <p>曦月说她其实还挺喜欢酸草莓的，酸酸甜甜的感觉，而且酸的水果富含维生素C，对皮肤好。</p>
-                <p>"相信我，因为我就是学生物的哈哈哈哈哈。不过吃完记得漱口，以免酸的吃多了腐蚀牙齿。"</p>
-                <p>一本正经地用生物学知识分析草莓，这就是学生物的曦月。</p>
-                <div class="letter-photo empty">🍓 新疆水果（待上传）</div>
-                <div class="letter-sign">—— 苏晨 & 曦月</div>
+                <div class="letter-from">—— 来自 曦月 ——</div>
+                <p>我已经上线啦，我猜你这会儿是不是还在上课，我先自己探索一下哈哈哈</p>
+<p>best，<br>曦月</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         },
         {
-            id: 27, date: '2026-06-19', icon: '🎋',
-            title: '端午节快乐',
-            preview: '很久没在光遇见到了，送上端午的祝福',
+            id: 21, date: '2026-04-09', icon: '💡',
+            title: '关于睡觉的建议',
+            preview: '睡眠是头等大事，希望你可以尽快找到适合你的解决方案',
+            stamp: '🎧',
+            content: `
+                <div class="letter-from">—— 来自 曦月 ——</div>
+                <p>吃完饭很多人都会困的，是不是碳水吃多了，比如面粉米饭啥的，会有晕碳的现象，我也会的。另外中午困的话就可以稍微睡一下，当你困的时候说明你的身体现在就非常需要睡眠了。</p>
+<p>另外室友打呼噜确实蛮痛苦的，非常能够理解，我之前也是有个室友打呼噜搞得我经常失眠，不知道你可不可以问一下辅导员看看能不能换宿舍？</p>
+<p>如果学校那边实在换不了宿舍的话，你要不要试一下买耳塞呀，好像有那种软软的记忆棉啥的。实在不行，好像也有那种耳机，然后你播放下雨的声音，还有那种主动降噪的耳机也可以试试~</p>
+<p>总之，睡眠是头等大事，多尝试一些办法，不能忽视，希望你可以尽快找到适合你的解决方案，有个好觉~🫂晚安~</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 22, date: '2026-04-09', icon: '📱',
+            title: '手绘二维码',
+            preview: '我以前手绘了一个二维码，还能用手机扫出来',
+            stamp: '📱',
+            content: `
+                <div class="letter-from">—— 来自 曦月 ——</div>
+                <p>羡慕了，感觉你真的应该当个画家哈哈哈哈</p>
+<p>这个生日礼物很用心了，对了，我记得你在去年12月22日的时候和我说过，你的生日是在7月份，具体的日期是多少号呀，客服告知在下😉</p>
+<p>等我有时候真的仔细找找，我以前画的两幅画，都是很久的时候画的了，我艺术天赋一般般其实，我之前甚至有一次闲来没有事手绘二维码哈哈哈哈哈哈，然后还能用手机扫出来~很神奇吧哈哈哈哈哈哈，不过总感觉那会儿精神不太正常，谁闲来无事手绘二维码呀哈哈哈哈哈哈哈</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 23, date: '2026-04-09', icon: '🎓',
+            title: '想去欧洲读博士',
+            preview: '我在准备当老师的同时，再去试试申请博士',
+            stamp: '📚',
+            content: `
+                <div class="letter-from">—— 来自 曦月 ——</div>
+                <p>哈哈哈谢谢你苏晨，虽然上次的面试没过，但是我感觉我也一直在进步，每一次都会比上一次讲的更好哈哈哈哈哈，就比如我昨天其实就讲的不错，不过结果可能会过段时间出来，期间继续准备其他的面试或者考试哈哈哈🤣这玩意就和打游戏一样，多试验几次就有经验了hh</p>
+<p>我最近又冒出来一个新的想法，可能我在准备当老师的同时，再去试试申请博士，想去欧洲看看有没有好的机会哈哈哈，目前也在同步进行中</p>
+<p>best,<br>yue</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 24, date: '2026-04-10', icon: '🐟',
+            title: '喂锦鲤',
+            preview: '这些锦鲤是学校池塘的鱼，用早餐面包喂的',
+            stamp: '🎏',
+            content: `
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>没关系啊，不用道歉的，你边读研边找工作，还有各种考试本来就很忙很累了，还有这个邮箱要登外网回复也够麻烦的，你能够回复我就已经很开心啦~</p>
+<p>这些锦鲤是学校池塘的鱼，可能学生们都比较喜欢喂小动物所以也喂鱼被喂胖了哈哈哈哈哈<br>对的，是用早餐面包喂的，买了三种面包，它们都很喜欢吃<br>那真的很巧诶，这周末没课，如果我有空的话还可以去喂锦鲤祝你面试顺利，给你带来好运哈哈哈哈<br>我们这边养鱼的池塘不常见，池塘很少，只有一些公园有，但公园里的都不算池塘，算湖，因为太大了哈哈哈哈哈<br>这还是我第一次喂鱼呢，我感觉喂鱼很好玩，不过喂鱼的时候容易想吃鱼，有点心虚🤫</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 25, date: '2026-04-10', icon: '🌿',
+            title: '最正确的选择',
+            preview: '在雨林拐你是我做过最正确的选择',
+            stamp: '💚',
+            content: `
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>嘿嘿，不好看的部分裁掉了，都是裁掉调整了构图的了~<br>给我夸成翘嘴了哈哈哈哈哈哈哈<br>我艺术方面比较好是因为我从小就对艺术挺感兴趣的，我这专业也和艺术息息相关，我还蛮喜欢我这个专业的课程的，但也仅喜欢和艺术相关的课程而已哈哈哈哈哈哈，只对可以玩的感兴趣，要是能对学习感兴趣也好了，让我学习感觉要我命了似的哈哈哈哈哈<br>你也是我认识的人里面学历最高，最自律，最优秀的人</p>
+<p>我真的，在雨林拐你是我做过最正确的选择哈哈哈哈哈，一拐就拐了个如此优秀的人，我就知道我的眼光很好，群星皆暗，孤月独明，众人之中，我总是能够一眼望见最优者嘿嘿🤓</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 26, date: '2026-06-19', icon: '🎋',
+            title: '端午节快乐！',
+            preview: '很久没有看到你了，上次看见你还是在3.24号',
             stamp: '🐉',
             content: `
-                <p>苏晨发了端午节的祝福给曦月：</p>
-                <p>"很久没有看到你了，上次看见你还是在3月24号十二点在老奶奶干饭，不过你没醒。"</p>
-                <p>曦月很忙——忙着找工作、转博、准备考试。苏晨说虽然她一直都很忙，但还是希望她能好好的。</p>
-                <p>端午节祝福语特别用心：</p>
-                <p>"薪水粽是上涨，干活粽是不忙，前途粽是辉煌，爱情粽是如糖，身体粽是健康！"</p>
-                <p>曦月后来回复了："谢谢你一直惦记着我。"</p>
-                <p>即使很久没见，好朋友还是会在节日里想起你。</p>
-                <div class="letter-photo empty">🎋 端午节祝福（待上传）</div>
-                <div class="letter-sign">—— 苏晨</div>
+                <div class="letter-from">—— 来自 苏晨 ——</div>
+                <p>Dear 月，<br>最近还好吗？很久没有看到你了，上次看见你还是在3.24号十二点在老奶奶干饭，不过你没醒哈哈哈哈哈<br>感觉你最近真的很忙呢，虽然你一直都忙就是了哈哈哈哈<br>最近是不是在忙着转博呀，还有忙工作，我想你应该已经找到了一份不错的工作，先恭喜你了🥳<br>最后，端午节快乐！<br>愿你：薪水&quot;粽&quot;是上涨，干活&quot;粽&quot;是不忙，前途&quot;粽&quot;是辉煌，爱情&quot;粽&quot;是如糖，身体&quot;粽&quot;是健康！<br>Best regards,<br>晨</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
+            `
+        },
+        {
+            id: 27, date: '2026-06-23', icon: '🎋',
+            title: '端午安康',
+            preview: '谢谢你还惦记着我，同样祝你端午安康',
+            stamp: '🐉',
+            content: `
+                <div class="letter-from">—— 来自 曦月 ——</div>
+                <p>Hey 苏晨，</p>
+<p>哇，谢谢你还惦记着我！！很感谢你的端午祝福，同样也祝你端午安康呀，&quot;粽&quot;是快快乐乐，平平安安~<br>很抱歉这段时间一直没来得及回复你的邮件。</p>
+                <div class="letter-photo empty">📸 照片（待上传）</div>
             `
         }
     ];
 
     // ========================================
-    // 3. 渲染信封列表
+    // 渲染信封
     // ========================================
     const timeline = document.getElementById('lettersTimeline');
     lettersData.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -489,8 +424,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const env = document.createElement('div');
             env.className = 'letter-envelope';
             env.style.animation = `fadeInUp 0.6s ease ${index * 0.06}s both`;
-            env.dataset.id = letter.id;
-
             env.innerHTML = `
                 <div class="env-date">
                     <span class="env-month">${fd.month}</span>
@@ -513,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========================================
-    // 4. 打开信笺
+    // 打开信笺
     // ========================================
     const modal = document.getElementById('letterModal');
     const backdrop = document.getElementById('modalBackdrop');
@@ -539,12 +472,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeBtn.addEventListener('click', closeLetter);
     backdrop.addEventListener('click', closeLetter);
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeLetter();
-    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLetter(); });
 
     // ========================================
-    // 5. 导航 & 滚动
+    // 导航
     // ========================================
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('navToggle');
@@ -584,5 +515,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     renderEnvelopes();
-    console.log('☁️ 曦月 & 苏晨 — 27封信笺已加载');
+    console.log('☁️ 曦月 & 苏晨 — ' + lettersData.length + '封信笺已加载');
 });
