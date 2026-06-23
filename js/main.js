@@ -529,7 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderEnvelopes();
 
     // ========================================
-    // 6. 相册翻页书
+    // 6. 相册 — 真实线圈相册 + 灯箱
     // ========================================
     const albumPhotos = [
         { src: 'images/cat.jpg', label: '🐱 苏晨家的小猫' },
@@ -549,66 +549,105 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'images/crystal_06.jpg', label: '🔮 水晶球 (6)' },
         { src: 'images/crystal_07.jpg', label: '🔮 水晶球 (7)' },
         { src: 'images/crystal_08.jpg', label: '🔮 水晶球 (8)' },
-        { src: 'images/food.jpg', label: '🍜 美食（来自乱码邮件）' },
+        { src: 'images/food.jpg', label: '🍜 美食' },
     ];
 
-    let currentPage = 0;
-    const bookPage = document.getElementById('bookPage');
-    const bookDots = document.getElementById('bookDots');
-    const bookPrev = document.getElementById('bookPrev');
-    const bookNext = document.getElementById('bookNext');
-    const bookCounter = document.getElementById('bookCounter');
+    // 按每页6张分组
+    const PAGE_SIZE = 6;
+    const totalPages = Math.ceil(albumPhotos.length / PAGE_SIZE);
+    let currentAlbumPage = 0;
 
-    function renderAlbumPage(index) {
-        const photo = albumPhotos[index];
-        bookPage.innerHTML = `
-            <img src="${photo.src}" alt="${photo.label}" loading="lazy">
-            <div class="book-page-label">${photo.label}</div>
-        `;
-        bookCounter.textContent = `${index + 1} / ${albumPhotos.length}`;
-        bookDots.querySelectorAll('.book-dot').forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
+    const bookPages = document.getElementById('bookPages');
+    const counter = document.getElementById('bookCounter');
+    const prevBtn = document.getElementById('bookPrev');
+    const nextBtn = document.getElementById('bookNext');
+    const lightbox = document.getElementById('albumLightbox');
+    const lbClose = document.getElementById('albumLbClose');
+    const lbImg = document.getElementById('albumLbImg');
+    const lbLabel = document.getElementById('albumLbLabel');
+
+    function renderAlbumPage(pageIndex) {
+        bookPages.innerHTML = '';
+        const start = pageIndex * PAGE_SIZE;
+        const end = Math.min(start + PAGE_SIZE, albumPhotos.length);
+        const pagePhotos = albumPhotos.slice(start, end);
+
+        const pageDiv = document.createElement('div');
+        pageDiv.className = 'album-page active';
+
+        const grid = document.createElement('div');
+        grid.className = 'album-page-grid';
+
+        pagePhotos.forEach((photo, i) => {
+            const item = document.createElement('div');
+            item.className = 'album-photo';
+            item.innerHTML = `
+                <img src="${photo.src}" alt="${photo.label}" loading="lazy">
+                <div class="album-photo-label">${photo.label}</div>
+            `;
+            item.addEventListener('click', () => openLightbox(start + i));
+            grid.appendChild(item);
         });
-        bookPrev.style.opacity = index === 0 ? '0.3' : '1';
-        bookNext.style.opacity = index === albumPhotos.length - 1 ? '0.3' : '1';
+
+        // Fill empty slots with placeholder cards
+        for (let i = pagePhotos.length; i < PAGE_SIZE; i++) {
+            const empty = document.createElement('div');
+            empty.className = 'album-photo';
+            empty.style.opacity = '0.05';
+            empty.style.background = 'rgba(200,190,170,0.3)';
+            empty.style.cursor = 'default';
+            grid.appendChild(empty);
+        }
+
+        pageDiv.appendChild(grid);
+        bookPages.appendChild(pageDiv);
+
+        counter.textContent = `${pageIndex + 1} / ${totalPages}`;
+        prevBtn.style.opacity = pageIndex === 0 ? '0.3' : '1';
+        nextBtn.style.opacity = pageIndex === totalPages - 1 ? '0.3' : '1';
     }
 
-    function goToPage(index) {
-        if (index < 0 || index >= albumPhotos.length) return;
-        bookPage.classList.add('flipping');
-        setTimeout(() => {
-            currentPage = index;
-            renderAlbumPage(index);
-            bookPage.classList.remove('flipping');
-        }, 200);
+    function goToAlbumPage(index) {
+        if (index < 0 || index >= totalPages) return;
+        currentAlbumPage = index;
+        renderAlbumPage(index);
     }
 
-    // Render dots
-    for (let i = 0; i < albumPhotos.length; i++) {
-        const dot = document.createElement('span');
-        dot.className = 'book-dot' + (i === 0 ? ' active' : '');
-        dot.addEventListener('click', () => goToPage(i));
-        bookDots.appendChild(dot);
+    // Lightbox
+    function openLightbox(photoIndex) {
+        const photo = albumPhotos[photoIndex];
+        lbImg.src = photo.src;
+        lbImg.alt = photo.label;
+        lbLabel.textContent = photo.label;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
-    // Initial render
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (lightbox.classList.contains('active')) {
+                closeLightbox();
+                return;
+            }
+        }
+        if (e.key === 'ArrowLeft') goToAlbumPage(currentAlbumPage - 1);
+        if (e.key === 'ArrowRight') goToAlbumPage(currentAlbumPage + 1);
+    });
+
+    prevBtn.addEventListener('click', () => goToAlbumPage(currentAlbumPage - 1));
+    nextBtn.addEventListener('click', () => goToAlbumPage(currentAlbumPage + 1));
+
+    // Init
     renderAlbumPage(0);
 
-    // Navigation
-    bookPrev.addEventListener('click', () => goToPage(currentPage - 1));
-    bookNext.addEventListener('click', () => goToPage(currentPage + 1));
-
-    // Keyboard
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') goToPage(currentPage - 1);
-        if (e.key === 'ArrowRight') goToPage(currentPage + 1);
-    });
-
-    // Touch / click on photo
-    bookPage.addEventListener('click', (e) => {
-        if (e.target.tagName !== 'IMG' && !e.target.closest('.book-page-label')) return;
-        goToPage(currentPage + 1);
-    });
-
-    console.log('☁️ 曦月 & 苏晨 — ' + lettersData.length + '封信笺 + ' + albumPhotos.length + '张照片已加载');
+    console.log('☁️ 曦月 & 苏晨 — ' + lettersData.length + '封信笺 + ' + albumPhotos.length + '张照片');
 });
