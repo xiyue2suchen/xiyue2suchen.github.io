@@ -843,26 +843,46 @@ document.addEventListener('DOMContentLoaded', () => {
         timeline.innerHTML = '';
         lettersData.forEach((letter, index) => {
             const fd = formatDate(letter.date);
+            // 从信件内容中提取发件人
+            const fromMatch = letter.content.match(/——\s*来自\s*(曦月|苏晨)\s*——/);
+            const sender = fromMatch ? fromMatch[1] : '曦月';
+            const isXiyue = sender === '曦月';
+            
             const env = document.createElement('div');
             env.className = 'letter-envelope';
+            env.dataset.sender = sender;
             env.style.animation = `fadeInUp 0.6s ease ${index * 0.06}s both`;
             env.innerHTML = `
-                <div class="env-date">
-                    <span class="env-month">${fd.month}</span>
-                    <span class="env-day">${fd.day}</span>
-                    <span class="env-year">${fd.year}</span>
+                <div class="env-flap">
+                    <div class="env-flap-inner"></div>
                 </div>
-                <div class="env-body">
-                    <span class="env-icon">${letter.icon}</span>
-                    <div class="env-info">
-                        <div class="env-title">${letter.title}</div>
-                        <div class="env-preview">${letter.preview}</div>
+                <div class="env-front">
+                    <span class="env-stamp">${letter.stamp}</span>
+                    <div class="env-sender ${isXiyue ? 'from-xiyue' : 'from-chen'}">
+                        <span class="env-sender-dot"></span>
+                        ${sender}
                     </div>
-                    <span class="env-arrow">→</span>
+                    <div class="env-date">
+                        <span class="env-month">${fd.month}</span>
+                        <span class="env-day">${fd.day}</span>
+                        <span class="env-year">${fd.year}</span>
+                    </div>
+                    <div class="env-body">
+                        <span class="env-icon">${letter.icon}</span>
+                        <div class="env-info">
+                            <div class="env-title">${letter.title}</div>
+                            <div class="env-preview">${letter.preview}</div>
+                        </div>
+                    </div>
+                    <div class="env-seal">
+                        <span class="env-seal-inner">✓</span>
+                    </div>
                 </div>
-                <span class="env-stamp">${letter.stamp}</span>
             `;
-            env.addEventListener('click', () => openLetter(letter));
+            env.addEventListener('click', () => {
+                env.classList.add('opened');
+                setTimeout(() => openLetter(letter), 400);
+            });
             timeline.appendChild(env);
         });
     }
@@ -882,9 +902,12 @@ document.addEventListener('DOMContentLoaded', () => {
         modalDate.textContent = fd.full;
         modalTitle.textContent = letter.title;
         modalBody.innerHTML = letter.content;
+        // 设置邮戳日期
+        const paper = document.getElementById('modalPaper');
+        paper.setAttribute('data-postmark', `${fd.year}.${fd.month}.${fd.day}`);
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        document.getElementById('modalPaper').scrollTop = 0;
+        paper.scrollTop = 0;
     }
 
     function closeLetter() {
