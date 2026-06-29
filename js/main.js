@@ -66,8 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>This is 曦月.</p>
 <p>Best wishes,</p>
 <p>xiyue</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 2, date: '2026-02-18', icon: '🐱',
@@ -102,8 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>To:曦月</p>
 <p>我今天又把我的早餐偷偷分给我家小猫了🤣</p>
 <p>苏晨</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 5, date: '2026-02-24', icon: '🌶️',
@@ -115,8 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>新疆猫，新疆魂，它还吃辣条，比我还喜欢吃垃圾食品😺</p>
 <p>因为我光明正大的话我妈不就知道我没好好吃饭了吗<br>我给它的是我碗里的饭，我每次觉得饭多就会往猫的饭盒里放🤫</p>
 <p>我记得我也截图了哈哈哈哈哈<br>居然如此默契🤪</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 6, date: '2026-02-24', icon: '🔦',
@@ -127,8 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>它真的看着很傻的样子，但是很聪明，还会抓老鼠，那小身板还跑去和别的猫干架，虽然我没亲眼看过，但是有次它腿的肉都漏出来了🙀</p>
 <p>平时也很安静，但是偶尔很吵，至于是怎么吵的那就不得不说前几天了，不知道抽的什么风，大半夜在院子里和别的猫一起叫，很恐怖，刚好那时候我醒了，听到那叫声我都快吓死了大半夜的，房间又是我一个人睡的，然后我想到了以前听过的恐怖故事黑猫，然后这时候我房间窗户那边突然很亮后又恢复正常，过一会儿它们又叫，然后有一个亮光，当时我真的以为有妖猫来了，真的吓死我了，结果那个光是我妈照的手电筒，原因是我妈想让猫进来，但是猫进了又想出去，于是有了两次白光，只剩我一个快吓四的人😇</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 7, date: '2026-02-24', icon: '🎆',
@@ -140,7 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>那你家猫感觉不挑食，挺好的</p>
 <p>不过为啥不能正大光明给呢哈哈哈哈哈哈🤣</p>
 <p>对咯，之前在跨年的时候我截屏的一些照片哈哈哈感觉还蛮有纪念意义的~</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
+                <div class="letter-photo"><img src="images/newyear_starfield_01.jpg" alt="星光沙漠跨年"></div>
+                <div class="letter-photo"><img src="images/newyear_starfield_02.jpg" alt="星光沙漠跨年"></div>
+                <div class="letter-photo"><img src="images/newyear_starfield_03.jpg" alt="星光沙漠跨年"></div>
+                <div class="letter-photo"><img src="images/newyear_starfield_04.jpg" alt="星光沙漠跨年"></div>
             `
         },
         {
@@ -153,8 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>今天元宵节了，你吃汤圆了吗</p>
 <p>网上说今天晚上也会有血月🌕</p>
 <p>Finally,<br>晨</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 9, date: '2026-03-03', icon: '🤪',
@@ -166,8 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>没带相机，傻蛋曦月你是不是不知道光遇有自带截图的，像相机一样清晰，在右下角可以截图，还可以录视频，但不会把聊天的拍到🤣</p>
 <p>下次截图可以试试，我以为那是你想把聊天记录做个念想截的图哈哈哈哈</p>
 <p>Best,<br>傻蛋晨<br>(我也骂自己傻蛋了噢😁)</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 10, date: '2026-03-04', icon: '🤣',
@@ -183,8 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>And she said: Hahaha I get what you mean! I&#x27;ll make a new one for you.</p>
 <p>Doubao is so funny, I&#x27;m laughing so hard 🤣</p>
 <p>Best,<br>Chen</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 11, date: '2026-03-04', icon: '🕯️',
@@ -199,8 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>siz bak yahxi ,qukum siz yahxi kurudugan ,umutlaydigan turmuxka erixisiz.</p>
 <p>注意，👆这一串拼音不是英文，不用试图翻译它，但你放心这是一个真诚的祝福，是我母语用拼音表达的，不是英文，没有偷偷骂你哦，骂你我一辈子发不了财，一胎生八百个儿子，好恶毒的诅咒🙀</p>
 <p>豆包是我最好的学习搭子呢😁</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 12, date: '2026-03-08', icon: '🌸',
@@ -210,8 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>Happy Women&#x27;s Day!🥳</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 13, date: '2026-03-08', icon: '📸',
@@ -221,8 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>👻</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 14, date: '2026-03-09', icon: '🌸',
@@ -234,8 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Happy women&#x27;s day~</p>
 <p>Maybe i should send you this message yesterday, hhh, But i think i hope you can feel happy every day, not just women&#x27;s day.🤪</p>
 <p>All the best,<br>xiyue</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 15, date: '2026-03-10', icon: '💤',
@@ -247,8 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>昨晚睡觉梦见被坏人抓了，要吃我，我说能不能给个痛快，她说可以，然后她掏出两个练习册用练习册mo了我脖子，然后练习册不够锋利，只开了个口子，她说我也没办法，没有别的工具，然后我就躺在那儿等着血流干，好多坏人在排队等我死了吃我</p>
 <p>好搞笑，拿练习册dao人</p>
 <p>但是我醒来后脖子也怪怪的🤔</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 16, date: '2026-03-11', icon: '😴',
@@ -260,8 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Dear 月，</p>
 <p>我今天中午吃完饭后好困好困，沾着枕头就睡觉了，睡了两个多小时，我说现在睡多了晚上睡不着想起还起不来，眼睛睁不开，脑子晕晕的，晚上睡的这样沉也就好了，看来晚上又要睡不着了，又要听室友打呼噜了😱</p>
 <p>Best,<br>晨</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 17, date: '2026-03-14', icon: '🔮',
@@ -306,8 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>今天上早课上课之前翻书包突然发现眼镜不见了，然后我想会落在哪里呢？然后我就打算去昨天上课的教室看看，心里祈祷眼镜不要丢，过了一会儿我的上学搭子来了，她问我我后面位置是不是给她占的，我一回头看，我眼镜给她们占座了，还好没丢😃</p>
 <p>躲猫猫活动今天要结束了😭</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 20, date: '2026-03-18', icon: '🙈',
@@ -318,8 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from">—— 来自 曦月 ——</div>
                 <p>我已经上线啦，我猜你这会儿是不是还在上课，我先自己探索一下哈哈哈</p>
 <p>best，<br>曦月</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 21, date: '2026-04-09', icon: '💡',
@@ -332,8 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>另外室友打呼噜确实蛮痛苦的，非常能够理解，我之前也是有个室友打呼噜搞得我经常失眠，不知道你可不可以问一下辅导员看看能不能换宿舍？</p>
 <p>如果学校那边实在换不了宿舍的话，你要不要试一下买耳塞呀，好像有那种软软的记忆棉啥的。实在不行，好像也有那种耳机，然后你播放下雨的声音，还有那种主动降噪的耳机也可以试试~</p>
 <p>总之，睡眠是头等大事，多尝试一些办法，不能忽视，希望你可以尽快找到适合你的解决方案，有个好觉~🫂晚安~</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 22, date: '2026-04-09', icon: '📱',
@@ -360,8 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>哈哈哈谢谢你苏晨，虽然上次的面试没过，但是我感觉我也一直在进步，每一次都会比上一次讲的更好哈哈哈哈哈，就比如我昨天其实就讲的不错，不过结果可能会过段时间出来，期间继续准备其他的面试或者考试哈哈哈🤣这玩意就和打游戏一样，多试验几次就有经验了hh</p>
 <p>我最近又冒出来一个新的想法，可能我在准备当老师的同时，再去试试申请博士，想去欧洲看看有没有好的机会哈哈哈，目前也在同步进行中</p>
 <p>best,<br>yue</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 24, date: '2026-04-10', icon: '🐟',
@@ -372,8 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>没关系啊，不用道歉的，你边读研边找工作，还有各种考试本来就很忙很累了，还有这个邮箱要登外网回复也够麻烦的，你能够回复我就已经很开心啦~</p>
 <p>这些锦鲤是学校池塘的鱼，可能学生们都比较喜欢喂小动物所以也喂鱼被喂胖了哈哈哈哈哈<br>对的，是用早餐面包喂的，买了三种面包，它们都很喜欢吃<br>那真的很巧诶，这周末没课，如果我有空的话还可以去喂锦鲤祝你面试顺利，给你带来好运哈哈哈哈<br>我们这边养鱼的池塘不常见，池塘很少，只有一些公园有，但公园里的都不算池塘，算湖，因为太大了哈哈哈哈哈<br>这还是我第一次喂鱼呢，我感觉喂鱼很好玩，不过喂鱼的时候容易想吃鱼，有点心虚🤫</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 25, date: '2026-04-10', icon: '🌿',
@@ -384,8 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>嘿嘿，不好看的部分裁掉了，都是裁掉调整了构图的了~<br>给我夸成翘嘴了哈哈哈哈哈哈哈<br>我艺术方面比较好是因为我从小就对艺术挺感兴趣的，我这专业也和艺术息息相关，我还蛮喜欢我这个专业的课程的，但也仅喜欢和艺术相关的课程而已哈哈哈哈哈哈，只对可以玩的感兴趣，要是能对学习感兴趣也好了，让我学习感觉要我命了似的哈哈哈哈哈<br>你也是我认识的人里面学历最高，最自律，最优秀的人</p>
 <p>我真的，在雨林拐你是我做过最正确的选择哈哈哈哈哈，一拐就拐了个如此优秀的人，我就知道我的眼光很好，群星皆暗，孤月独明，众人之中，我总是能够一眼望见最优者嘿嘿🤓</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 26, date: '2026-06-19', icon: '🎋',
@@ -395,8 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from">—— 来自 苏晨 ——</div>
                 <p>Dear 月，<br>最近还好吗？很久没有看到你了，上次看见你还是在3.24号十二点在老奶奶干饭，不过你没醒哈哈哈哈哈<br>感觉你最近真的很忙呢，虽然你一直都忙就是了哈哈哈哈<br>最近是不是在忙着转博呀，还有忙工作，我想你应该已经找到了一份不错的工作，先恭喜你了🥳<br>最后，端午节快乐！<br>愿你：薪水&quot;粽&quot;是上涨，干活&quot;粽&quot;是不忙，前途&quot;粽&quot;是辉煌，爱情&quot;粽&quot;是如糖，身体&quot;粽&quot;是健康！<br>Best regards,<br>晨</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         {
             id: 27, date: '2026-06-23', icon: '🎋',
@@ -407,8 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from">—— 来自 曦月 ——</div>
                 <p>Hey 苏晨，</p>
 <p>哇，谢谢你还惦记着我！！很感谢你的端午祝福，同样也祝你端午安康呀，&quot;粽&quot;是快快乐乐，平平安安~<br>很抱歉这段时间一直没来得及回复你的邮件。</p>
-                <div class="letter-photo empty">📸 照片（待上传）</div>
-            `
+`
         },
         // ─── 2026年6月 最新 ───
         {
@@ -504,10 +486,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class=\"letter-from\">—— 来自 苏晨 ——</div>
                 <p>我们家又来了一个小的狸花猫，好像是狸花猫，非常调皮，会玩大猫咪的尾巴，它们两个还会偷吃我们买的烧烤，不止一次！！！总是抢我们的零食吃，一点没有猫样，像人一样吃零食吃烧烤</p>
 <p>关于这个正新鸡排的画，老师给我们定的主题好像是生活中的一些瞬间，要求必须有鸡鸭子什么的，然后我正在思考该画些什么，有个人突然来一句正新鸡排，之后正新鸡排在我脑子里挥之不去，我没招了，就画了个正新鸡排，老师看我画的说是现杀现吃，食材新鲜吗哈哈哈哈哈哈哈</p>
-                <div class=\"letter-photo\"><img src=\"images/new_kitten_01.jpg\" alt=\"新来的小狸花猫\"></div>
-                <div class=\"letter-photo\"><img src=\"images/new_kitten_02.jpg\" alt=\"小狸花猫\"></div>
-                <div class=\"letter-photo\"><img src=\"images/zhengxin_chicken.jpg\" alt=\"正新鸡排画\"></div>
-                <div class=\"letter-photo\"><img src=\"images/zhengxin_chicken_doodle.jpg\" alt=\"正新鸡排简笔画\"></div>
             `
         },
         {
@@ -685,10 +663,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'images/food.jpg', label: '🍜 美食' },
         { src: 'images/chihiro_drawing.png', label: '🎨 曦月临摹的千寻' },
         { src: 'images/jiaozi_cert.png', label: '📜 曦月的教资证' },
-        { src: 'images/new_kitten_01.jpg', label: '🐱 新来的小狸花猫' },
-        { src: 'images/new_kitten_02.jpg', label: '🐱 小狸花猫' },
-        { src: 'images/zhengxin_chicken.jpg', label: '🍗 正新鸡排画' },
-        { src: 'images/zhengxin_chicken_doodle.jpg', label: '✏️ 正新鸡排简笔画' },
+        { src: 'images/newyear_starfield_01.jpg', label: '🎆 星光沙漠跨年' },
+        { src: 'images/newyear_starfield_02.jpg', label: '🎆 星光沙漠跨年' },
+        { src: 'images/newyear_starfield_03.jpg', label: '🎆 星光沙漠跨年' },
+        { src: 'images/newyear_starfield_04.jpg', label: '🎆 星光沙漠跨年' },
     ];
 
     // 按每页6张分组
