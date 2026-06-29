@@ -410,7 +410,7 @@ body {
     opacity: 1;
 }
 
-/* ========== 信笺弹窗 ========== */
+/* ========== 信笺弹窗 — 真实纸质信 ========== */
 .letter-modal {
     display: none;
     position: fixed;
@@ -429,26 +429,68 @@ body {
     backdrop-filter: blur(8px);
 }
 
+/* ── 信纸主体 ── */
 .modal-paper {
     position: relative;
     max-width: 640px;
     width: 100%;
     max-height: 85vh;
     overflow-y: auto;
-    background: var(--paper);
-    border-radius: 20px;
-    padding: 48px 40px 40px;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+    background: #fcf8ef;
+    border-radius: 4px;
+    padding: 52px 44px 44px;
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.08),
+        0 8px 30px rgba(0,0,0,0.12),
+        0 24px 80px rgba(0,0,0,0.4),
+        inset 0 0 60px rgba(139, 119, 80, 0.06);
     animation: paperOpen 0.5s ease both;
-    /* 纸质质感 */
+    /* 信纸横线 */
     background-image:
         repeating-linear-gradient(
             0deg,
             transparent,
-            transparent 28px,
-            rgba(212,168,83,0.04) 28px,
-            rgba(212,168,83,0.04) 29px
+            transparent 27px,
+            rgba(180, 160, 120, 0.10) 27px,
+            rgba(180, 160, 120, 0.10) 28px
         );
+    /* 微妙的纸张纹理 */
+    background-color: #fcf8ef;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(180, 160, 120, 0.10) 27px, rgba(180, 160, 120, 0.10) 28px),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(180, 160, 120, 0.03) 40px, rgba(180, 160, 120, 0.03) 41px);
+}
+
+/* 信纸顶部 — 信封折叠边效果 */
+.modal-paper::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(180deg, #e8dcc8, transparent);
+    border-radius: 4px 4px 0 0;
+}
+
+/* 红色火漆封印 */
+.modal-paper::after {
+    content: '❤';
+    position: absolute;
+    bottom: 24px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    background: radial-gradient(circle at 40% 35%, #e85050, #b22222 60%, #8b1a1a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.6);
+    box-shadow:
+        0 2px 8px rgba(139, 26, 26, 0.4),
+        inset 0 1px 2px rgba(255,255,255,0.2);
+    z-index: 1;
+    pointer-events: none;
 }
 
 @keyframes paperOpen {
@@ -456,70 +498,111 @@ body {
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+/* 关闭按钮 — 像真正的邮票穿孔 */
 .modal-close {
     position: sticky;
     top: 0;
     float: right;
-    width: 36px; height: 36px;
+    width: 38px; height: 38px;
     border-radius: 50%;
-    border: none;
-    background: rgba(61,50,41,0.08);
+    border: 2px dashed rgba(61,50,41,0.15);
+    background: rgba(250, 248, 239, 0.95);
     color: var(--ink-light);
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    z-index: 5;
+    backdrop-filter: blur(4px);
 }
 
 .modal-close:hover {
-    background: rgba(61,50,41,0.15);
+    background: #f0e8d8;
     color: var(--ink);
+    border-color: rgba(61,50,41,0.3);
+    transform: rotate(90deg);
 }
 
+/* ── 信头 ── */
 .modal-header {
-    margin-bottom: 28px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(61,50,41,0.1);
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #d4c8b0;
+    position: relative;
+}
+
+/* 信头装饰线 */
+.modal-header::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e0d4c0;
 }
 
 .modal-date {
-    font-size: 0.8rem;
-    color: var(--gold);
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #8a7a6a;
     letter-spacing: 1px;
-    font-weight: 600;
+    background: #f0e8d8;
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .modal-header h2 {
     font-family: var(--font-title);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--ink);
-    margin-top: 8px;
+    letter-spacing: 1px;
 }
 
+/* ── 信体 ── */
 .modal-body {
     font-family: var(--font-hand);
-    font-size: 1.35rem;
-    line-height: 2;
-    color: var(--ink);
-    padding: 8px 0;
+    font-size: 1.3rem;
+    line-height: 2.05;
+    color: #3a3028;
+    padding: 8px 4px 60px;
+    position: relative;
 }
 
 .modal-body p {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     text-indent: 2em;
+    word-break: break-word;
 }
 
+/* 照片 — 像贴上去的拍立得照片 */
 .modal-body .letter-photo {
-    margin: 16px 0 20px;
-    border-radius: 12px;
+    margin: 20px auto 24px;
+    border-radius: 2px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.12),
+        0 1px 2px rgba(0,0,0,0.08),
+        inset 0 0 0 1px rgba(255,255,255,0.8);
     text-indent: 0;
+    max-width: 90%;
+    background: white;
+    padding: 6px;
+    transform: rotate(-0.5deg);
+    transition: transform 0.3s;
+}
+
+.modal-body .letter-photo:hover {
+    transform: rotate(0deg) scale(1.02);
 }
 
 .modal-body .letter-photo img {
     width: 100%;
     display: block;
+    border-radius: 1px;
 }
 
 .modal-body .letter-photo.empty {
@@ -534,24 +617,30 @@ body {
     text-indent: 0;
 }
 
+/* 写信人标记 */
 .modal-body .letter-from {
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    color: var(--gold);
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #8a7a6a;
     letter-spacing: 2px;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
     border-bottom: 1px dashed rgba(61,50,41,0.12);
     text-indent: 0;
+    text-transform: uppercase;
 }
 
+/* 签名区域 */
 .modal-body .letter-sign {
     text-align: right;
-    margin-top: 24px;
-    padding-top: 16px;
+    margin-top: 28px;
+    padding-top: 14px;
     border-top: 1px dashed rgba(61,50,41,0.15);
-    font-size: 1.2rem;
+    font-family: var(--font-hand);
+    font-size: 1.3rem;
     text-indent: 0;
+    color: var(--ink);
+    position: relative;
 }
 
 /* ========== 相册书 — 真实线圈相册 ========== */
@@ -957,6 +1046,8 @@ body {
     .env-body { padding: 16px 20px; }
     .env-stamp { display: none; }
 
-    .modal-paper { padding: 32px 24px; }
-    .modal-body { font-size: 1.15rem; }
+    .modal-paper { padding: 28px 18px 36px; }
+    .modal-body { font-size: 1.1rem; padding-bottom: 40px; }
+    .modal-paper::after { width: 36px; height: 36px; font-size: 1rem; bottom: 14px; right: 16px; }
+    .modal-body .letter-photo { max-width: 100%; padding: 4px; }
 }
