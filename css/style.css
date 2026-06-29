@@ -657,9 +657,10 @@ body {
 }
 
 /* --- 相册主体 --- */
+/* Simpler approach: separate ring holes and rings */
 .photo-book {
     position: relative;
-    background: #2c1810;
+    background: linear-gradient(180deg, #3d2418 0%, #2c1810 8px, #2c1810 100%);
     border-radius: 6px 6px 16px 16px;
     padding: 48px 20px 20px;
     box-shadow:
@@ -668,66 +669,72 @@ body {
     border-bottom: 3px solid #1a0f0a;
 }
 
-/* 书脊 */
+/* Book spine - leather texture */
 .book-spine {
     position: absolute;
     top: 0; left: 20px; right: 20px;
     height: 48px;
-    background: linear-gradient(180deg, #3d2418, #2c1810);
+    background: linear-gradient(180deg, #4a3020, #3d2418 40%, #2c1810);
     border-radius: 6px 6px 0 0;
-}
-
-/* --- 线圈（铁圈装订）--- */
-.photo-book::before {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 30px;
-    right: 30px;
-    height: 36px;
-    display: flex;
-    justify-content: space-between;
-    gap: 0;
-    /* Create 14 ring holes using repeating gradient */
-    background:
-        repeating-linear-gradient(
-            90deg,
-            transparent 0px,
-            transparent 22px,
-            #2c1810 22px,
-            #2c1810 26px,
-            transparent 26px,
-            transparent 48px
-        );
-    z-index: 2;
-}
-
-/* Individual coil rings */
-.photo-book::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 34px;
-    right: 34px;
-    height: 44px;
-    display: flex;
-    justify-content: space-between;
-    gap: 0;
-    background:
-        repeating-linear-gradient(
-            90deg,
-            transparent 0px,
-            transparent 20px,
-            #c0a880 20px,
-            #d4c4a0 22px,
-            #a08860 24px,
-            #c0a880 26px,
-            transparent 26px,
-            transparent 48px
-        );
-    border-radius: 3px;
     z-index: 3;
-    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+}
+
+/* Ring hole punches */
+.book-spine::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 8px;
+    display: flex;
+    justify-content: space-around;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent calc((100% - 20px) / 14 - 10px),
+            #1a0f0a calc((100% - 20px) / 14 - 10px),
+            #1a0f0a calc((100% - 20px) / 14),
+            transparent calc((100% - 20px) / 14),
+            transparent calc((100% - 20px) / 14 + 4px)
+        );
+    z-index: 6;
+}
+
+/* 3D coil rings */
+.book-spine::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    right: 6px;
+    height: 40px;
+    z-index: 7;
+    display: flex;
+    justify-content: space-around;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent calc((100% - 12px) / 14 - 8px),
+            /* Ring: 3D metallic coil */
+            linear-gradient(180deg, 
+                #d4c4a0 0%, 
+                #c0a880 15%, 
+                #a08860 35%, 
+                #8a7850 50%, 
+                #a08860 65%, 
+                #c0a880 85%, 
+                #d4c4a0 100%
+            ) 0 0 / 12px 40px no-repeat,
+            transparent calc((100% - 12px) / 14 - 8px + 12px),
+            transparent calc((100% - 12px) / 14)
+        );
+    filter: 
+        drop-shadow(0 3px 4px rgba(0,0,0,0.5))
+        drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+    border-radius: 4px;
 }
 
 /* --- 书页区域 --- */

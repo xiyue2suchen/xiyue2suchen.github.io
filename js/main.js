@@ -962,10 +962,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'images/food.jpg', label: '🍜 美食' },
         { src: 'images/chihiro_drawing.png', label: '🎨 曦月临摹的千寻' },
         { src: 'images/jiaozi_cert.png', label: '📜 曦月的教资证' },
+        { src: 'images/food_lamb_rice.jpg', label: '🍖 苏晨分享的羊肉抓饭' },
+        { src: 'images/kashgar_chen_01.jpg', label: '🏔️ 苏晨拍的喀什 (1)' },
+        { src: 'images/kashgar_chen_02.jpg', label: '🏔️ 苏晨拍的喀什 (2)' },
+        { src: 'images/kashgar_chen_03.jpg', label: '🏔️ 苏晨拍的喀什 (3)' },
         { src: 'images/newyear_starfield_01.jpg', label: '🎆 星光沙漠跨年' },
         { src: 'images/newyear_starfield_02.jpg', label: '🎆 星光沙漠跨年' },
         { src: 'images/newyear_starfield_03.jpg', label: '🎆 星光沙漠跨年' },
         { src: 'images/newyear_starfield_04.jpg', label: '🎆 星光沙漠跨年' },
+        { src: 'images/doodle_chen_01.jpg', label: '✏️ 苏晨的简笔画 (1)' },
+        { src: 'images/doodle_chen_02.jpg', label: '✏️ 苏晨的简笔画 (2)' },
+        { src: 'images/doodle_chen_03.jpg', label: '✏️ 苏晨的简笔画 (3)' },
     ];
 
     // 按每页6张分组
