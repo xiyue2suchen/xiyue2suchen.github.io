@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 '🐱 苏晨家的小猫',
                 '🍎 穿了衣服的苹果',
                 '🙈 躲猫猫',
+                '🏔️ 曦月拍的新疆烟火',
                 '🔮 水晶球 (1)',
                 '🔮 水晶球 (2)',
                 '🔮 水晶球 (3)',
@@ -211,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 '🐱 Chen\'s Little Cat',
                 '🍎 The Apple Wore Clothes',
                 '🙈 Hide & Seek',
+                '🏔️ Xiyue\'s Xinjiang Vibes',
                 '🔮 Crystal (1)',
                 '🔮 Crystal (2)',
                 '🔮 Crystal (3)',
@@ -1010,8 +1012,8 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
                 <p>哈哈哈哈，我之前去新疆的时候从吃西瓜的时候就感觉出来了，新疆的水果很甜hhh, 不过说实话，我还蛮喜欢酸的草莓，那种酸酸甜甜的感觉，而且你知道嘛，酸的水果富含维生素C，其实吃点算水果对皮肤超级有帮助，好像可以帮助胶原蛋白再生哈哈哈哈，相信我，因为我就是学生物的哈哈哈哈哈，不过吃完之后记得漱口，以免酸的吃太多了腐蚀牙齿😆😬</p>
-<p>另外分享一张我之前2024年去新疆的时候拍的照片，感觉很有本地的烟火味嘿嘿嘿</p>
-                <!-- Xiyue's photo was embedded in the email but not extracted to filesystem -->
+                <p>另外分享一张我之前2024年去新疆的时候拍的照片，感觉很有本地的烟火味嘿嘿嘿</p>
+                <div class="letter-photo"><img src="images/xiyue_xinjiang.jpg" alt="曦月2024年拍的新疆烟火气息"></div>
                 <p>best,<br>曦月</p>
 
                 <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
@@ -1071,6 +1073,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'images/cat.jpg' },
         { src: 'images/apple.jpg' },
         { src: 'images/hideandseek.jpg' },
+        { src: 'images/xiyue_xinjiang.jpg' },
         { src: 'images/crystal_01.jpg' },
         { src: 'images/crystal_02.jpg' },
         { src: 'images/crystal_03.jpg' },
