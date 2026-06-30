@@ -458,18 +458,6 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
                 <p>👻</p>
-                <div class="letter-photo"><img src="images/newyear_starfield_01.jpg" alt="星光沙漠跨年"></div>
-                <div class="letter-photo"><img src="images/newyear_starfield_02.jpg" alt="星光沙漠跨年"></div>
-                <div class="letter-photo"><img src="images/newyear_starfield_03.jpg" alt="星光沙漠跨年"></div>
-                <div class="letter-photo"><img src="images/newyear_starfield_04.jpg" alt="星光沙漠跨年"></div>
-                <div class="letter-photo"><img src="images/crystal_01.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_02.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_03.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_04.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_05.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_06.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_07.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_08.jpg" alt="水晶球"></div>
 `
         },
         {
@@ -518,15 +506,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Dear 月，</p>
                 <p>下次上线躲猫猫活动没有结束的话我们拍这个吧👇<br>还可以用小不点魔法进水晶里面拍😁</p>
                 <p>Best,<br>晨</p>
-                <div class="letter-photo"><img src="images/hideandseek.jpg" alt="躲猫猫"></div>
-                <div class="letter-photo"><img src="images/crystal_01.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_02.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_03.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_04.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_05.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_06.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_07.jpg" alt="水晶球"></div>
-                <div class="letter-photo"><img src="images/crystal_08.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_01.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_02.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_03.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_04.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_05.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_06.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_07.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_08.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_09.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_10.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_11.jpg" alt="水晶球和彩虹岛"></div>
+                <div class="letter-photo"><img src="images/crystal_HD_12.jpg" alt="水晶球和彩虹岛"></div>
             `
         },
         {
