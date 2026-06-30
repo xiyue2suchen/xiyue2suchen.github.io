@@ -40,9 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 '🐱 苏晨家的小猫',
                 '🍎 穿了衣服的苹果',
                 '🙈 躲猫猫',
-                '🏔️ 曦月拍的新疆喀什',
-                '🏔️ 喀什街景',
-                '🏔️ 新疆风光',
                 '🔮 水晶球 (1)',
                 '🔮 水晶球 (2)',
                 '🔮 水晶球 (3)',
@@ -214,9 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 '🐱 Chen\'s Little Cat',
                 '🍎 The Apple Wore Clothes',
                 '🙈 Hide & Seek',
-                '🏔️ Xiyue\'s Kashgar Photos',
-                '🏔️ Kashgar Street',
-                '🏔️ Xinjiang Scenery',
                 '🔮 Crystal (1)',
                 '🔮 Crystal (2)',
                 '🔮 Crystal (3)',
@@ -1017,10 +1011,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
                 <p>哈哈哈哈，我之前去新疆的时候从吃西瓜的时候就感觉出来了，新疆的水果很甜hhh, 不过说实话，我还蛮喜欢酸的草莓，那种酸酸甜甜的感觉，而且你知道嘛，酸的水果富含维生素C，其实吃点算水果对皮肤超级有帮助，好像可以帮助胶原蛋白再生哈哈哈哈，相信我，因为我就是学生物的哈哈哈哈哈，不过吃完之后记得漱口，以免酸的吃太多了腐蚀牙齿😆😬</p>
 <p>另外分享一张我之前2024年去新疆的时候拍的照片，感觉很有本地的烟火味嘿嘿嘿</p>
-                <div class="letter-photo"><img src="images/xinjiang_01.jpg" alt="曦月拍的新疆喀什"></div>
-                <div class="letter-photo"><img src="images/xinjiang_02.jpg" alt="喀什街景"></div>
-                <div class="letter-photo"><img src="images/xinjiang_03.jpg" alt="新疆风光"></div>
+                <!-- Xiyue's photo was embedded in the email but not extracted to filesystem -->
                 <p>best,<br>曦月</p>
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>酸甜的草莓我也蛮喜欢的，但我大多吃到的是纯酸的，而且有些口感像嚼塑料，可能我运气不太好总是买到不好吃的哈哈哈哈哈</p>
+<p>其实我还是挺能吃酸的，新疆的青杏子我从小吃到大，可爱吃了，但我分享给我的室友，她们都是内地来的，她们说很酸，一口下去痛苦面具，都吐掉了，而我就能面不改色的吃掉哈哈哈哈哈</p>
+<p>肯定相信你哈哈哈哈哈<br>放心吧，我每天都会刷牙的哈哈哈哈哈哈</p>
+<p>诶，去的是喀什吗？你这些照片拍的也很绝啊，有种故事感，电影感<br>我去年去喀什的时候也拍了些照片，不过我拍的很随便哈哈哈哈</p>
+                <div class="letter-photo"><img src="images/kashgar_chen_01.jpg" alt="苏晨拍的喀什街景"></div>
+                <div class="letter-photo"><img src="images/kashgar_chen_02.jpg" alt="苏晨拍的喀什街景"></div>
+                <div class="letter-photo"><img src="images/kashgar_chen_03.jpg" alt="苏晨拍的喀什街景"></div>
 `
         },
         {
@@ -1070,9 +1071,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'images/cat.jpg' },
         { src: 'images/apple.jpg' },
         { src: 'images/hideandseek.jpg' },
-        { src: 'images/xinjiang_01.jpg' },
-        { src: 'images/xinjiang_02.jpg' },
-        { src: 'images/xinjiang_03.jpg' },
         { src: 'images/crystal_01.jpg' },
         { src: 'images/crystal_02.jpg' },
         { src: 'images/crystal_03.jpg' },
