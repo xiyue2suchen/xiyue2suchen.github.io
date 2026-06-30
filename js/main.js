@@ -458,6 +458,18 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
                 <p>👻</p>
+                <div class="letter-photo"><img src="images/newyear_starfield_01.jpg" alt="星光沙漠跨年"></div>
+                <div class="letter-photo"><img src="images/newyear_starfield_02.jpg" alt="星光沙漠跨年"></div>
+                <div class="letter-photo"><img src="images/newyear_starfield_03.jpg" alt="星光沙漠跨年"></div>
+                <div class="letter-photo"><img src="images/newyear_starfield_04.jpg" alt="星光沙漠跨年"></div>
+                <div class="letter-photo"><img src="images/crystal_01.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_02.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_03.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_04.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_05.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_06.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_07.jpg" alt="水晶球"></div>
+                <div class="letter-photo"><img src="images/crystal_08.jpg" alt="水晶球"></div>
 `
         },
         {
