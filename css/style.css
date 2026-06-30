@@ -3,7 +3,7 @@
    设计：信笺 / 信封 / 手写风格
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&family=ZCOOL+XiaoWei&display=swap');
 
 :root {
     /* 光遇色调 — 温暖、梦幻 */
@@ -606,11 +606,15 @@ body {
         0 24px 80px rgba(0,0,0,0.4),
         inset 0 0 60px rgba(139, 119, 80, 0.06);
     animation: paperOpen 0.5s ease both;
-    /* 信纸横线 + 纸张纹理 */
+    /* 纸张纹理 — 多层叠加实现粗糙褶皱感 */
     background-color: #fcf8ef;
     background-image:
+        /* 横线 */
         repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(180, 160, 120, 0.10) 27px, rgba(180, 160, 120, 0.10) 28px),
-        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(180, 160, 120, 0.03) 40px, rgba(180, 160, 120, 0.03) 41px);
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(180, 160, 120, 0.03) 40px, rgba(180, 160, 120, 0.03) 41px),
+        /* 纸张颗粒感 — SVG 噪声纹理模拟粗糙纸面 */
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-blend-mode: normal, normal, overlay;
     /* 明信片边框 */
     border: 1px solid #e8dcc8;
     outline: 1px solid #f0e8d8;
@@ -802,11 +806,11 @@ body {
     color: #2a2218;
 }
 
-/* 苏晨正文 — 活波圆润风格（可爱俏皮） */
+/* 苏晨正文 — 清秀手写风格（干净自然） */
 .modal-body .from-chen-text {
-    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.3px;
     color: #4a3a2a;
 }
 
@@ -964,26 +968,26 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 14px;
-    padding: 8px 4px;
+    gap: 12px;
+    padding: 8px 2px;
 }
 
 /* --- 每张照片 — 真实拍摄的质感 --- */
 .album-photo {
     position: relative;
     background: white;
-    padding: 6px 6px 20px; /* 底部留白像拍立得 */
+    padding: 5px 5px 18px; /* 底部留白像拍立得 */
     box-shadow:
         0 2px 8px rgba(0,0,0,0.15),
         0 1px 3px rgba(0,0,0,0.1),
         inset 0 0 0 1px rgba(255,255,255,0.6);
     cursor: pointer;
     transition: all 0.3s ease;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 1px;
     flex: 0 0 auto;
-    width: calc(33.33% - 12px);
-    max-width: 200px;
+    width: calc(33.33% - 10px);
+    max-width: 180px;
 }
 
 /* 特色照片：稍大，突出显示 */
@@ -1016,6 +1020,22 @@ body {
     z-index: 2;
     pointer-events: none;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* 贴纸装饰 — 贴在照片上的小图案 */
+.photo-sticker {
+    position: absolute;
+    z-index: 5;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+    pointer-events: none;
+    transform: rotate(-8deg);
+    animation: stickerWiggle 3s ease-in-out infinite;
+}
+
+@keyframes stickerWiggle {
+    0%, 100% { transform: rotate(-8deg) scale(1); }
+    50% { transform: rotate(-4deg) scale(1.08); }
 }
 
 .album-photo:hover {
@@ -1292,16 +1312,24 @@ body {
     .modal-body { font-size: 1.1rem; padding-bottom: 40px; }
     .modal-paper::after { width: 54px; height: 54px; font-size: 0.45rem; bottom: 14px; right: 16px; }
 
-    /* 手机相册：两列 */
+    /* 手机相册：三列小图 */
+    .album-page-grid {
+        gap: 8px;
+        padding: 6px 2px;
+    }
     .album-photo {
-        width: calc(50% - 10px);
-        max-width: 160px;
+        width: calc(33.33% - 8px);
+        max-width: 120px;
+        padding: 3px 3px 12px;
     }
     .album-photo.featured {
-        width: calc(100% - 10px);
-        max-width: 240px;
+        width: calc(50% - 8px);
+        max-width: 160px;
     }
     .album-photo img {
-        height: 100px;
+        height: 80px;
+    }
+    .photo-sticker {
+        font-size: 0.9rem;
     }
 }

@@ -1236,13 +1236,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const fd = formatDate(letter.date);
         modalDate.textContent = fd.full;
         modalTitle.textContent = getLetterTitle(letter);
-        // Render body content - translate sender labels
-        let bodyContent = letter.content;
-        if (currentLang === 'en') {
-            // Translate letter-from labels
+        // Render body content in active language
+        let bodyContent;
+        if (currentLang === 'en' && typeof lettersContentEn !== 'undefined' && lettersContentEn[letter.id]) {
+            bodyContent = lettersContentEn[letter.id];
+            // Translate sender labels in English content too
             bodyContent = bodyContent
                 .replace(/—— 来自 曦月 ——/g, '—— From Xiyue ——')
                 .replace(/—— 来自 苏晨 ——/g, '—— From Chen ——');
+        } else {
+            bodyContent = letter.content;
+            if (currentLang === 'en') {
+                bodyContent = bodyContent
+                    .replace(/—— 来自 曦月 ——/g, '—— From Xiyue ——')
+                    .replace(/—— 来自 苏晨 ——/g, '—— From Chen ——');
+            }
         }
         modalBody.innerHTML = bodyContent;
 
@@ -1321,9 +1329,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========================================
-    // 6. 相册 — 真实线圈相册 + 灯箱
+    // 6. 相册 — 真实剪贴簿 + 随机倾斜 + 贴纸
     // ========================================
-    const PAGE_SIZE = 6;
+    const PAGE_SIZE = 9;
     const totalPages = Math.ceil(albumPhotos.length / PAGE_SIZE);
     currentAlbumPage = 0;
 
@@ -1355,34 +1363,46 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.createElement('div');
         grid.className = 'album-page-grid';
 
-        // Decide which photo on this page is "featured" (larger)
+        // Decide which photos on this page are "featured" (larger)
         const featuredIndex = Math.floor(Math.random() * pagePhotos.length);
+
+        // Sticker emoji options
+        const stickers = ['⭐', '❤️', '🌟', '✨', '💫', '🌸', '🎀', '🍀', '💖', '🦋', '🌈', '📌'];
 
         pagePhotos.forEach((photo, i) => {
             const item = document.createElement('div');
             const label = getAlbumLabel(start + i);
 
-            // Random slight rotation: -3deg to 3deg
-            const rotation = (Math.random() * 6 - 3).toFixed(1);
+            // Random tilt: -6deg to 6deg (wider range)
+            const rotation = (Math.random() * 12 - 6).toFixed(1);
             // Random vertical offset for staggered feel
-            const offsetY = (Math.random() * 8 - 4).toFixed(1);
-            // Random bottom padding variation (simulates different photo sizes)
-            const bottomPad = 16 + Math.floor(Math.random() * 10);
+            const offsetY = (Math.random() * 12 - 6).toFixed(1);
+            // Random bottom padding variation
+            const bottomPad = 14 + Math.floor(Math.random() * 14);
 
             let className = 'album-photo';
             if (i === featuredIndex && pagePhotos.length > 1) {
                 className += ' featured';
             }
 
+            // 30% chance add a sticker
+            const hasSticker = Math.random() < 0.3;
+            const sticker = hasSticker ? stickers[Math.floor(Math.random() * stickers.length)] : '';
+
             item.className = className;
             item.style.transform = `rotate(${rotation}deg)`;
             item.style.marginTop = `${offsetY}px`;
             item.style.setProperty('--bottom-pad', `${bottomPad}px`);
 
-            item.innerHTML = `
-                <img src="${photo.src}" alt="${label}" loading="lazy">
-                <div class="album-photo-label">${label}</div>
-            `;
+            let html = `<img src="${photo.src}" alt="${label}" loading="lazy">`;
+            if (sticker) {
+                const stickerPositions = ['top: -8px; right: -6px;', 'top: -6px; left: -4px;', 'bottom: 10px; right: -4px;', 'top: 4px; right: -8px;'];
+                const pos = stickerPositions[Math.floor(Math.random() * stickerPositions.length)];
+                html += `<span class="photo-sticker" style="${pos}">${sticker}</span>`;
+            }
+            html += `<div class="album-photo-label">${label}</div>`;
+
+            item.innerHTML = html;
             item.addEventListener('click', () => openLightbox(start + i));
             grid.appendChild(item);
         });
