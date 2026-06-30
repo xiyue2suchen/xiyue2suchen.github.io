@@ -17,13 +17,18 @@
     <!-- ========== 导航 ========== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">✦ 曦月 &amp; 苏晨</a>
+            <a href="#home" class="nav-logo" data-i18n="navLogo">✦ 曦月 &amp; 苏晨</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">首页</a></li>
-                <li><a href="#letters">信笺</a></li>
-                <li><a href="#album">相册</a></li>
-                <li><a href="#about">关于</a></li>
+                <li><a href="#home" data-i18n="navHome">首页</a></li>
+                <li><a href="#letters" data-i18n="navLetters">信笺</a></li>
+                <li><a href="#album" data-i18n="navAlbum">相册</a></li>
+                <li><a href="#about" data-i18n="navAbout">关于</a></li>
             </ul>
+            <div class="nav-lang-switch">
+                <button class="lang-btn lang-active" data-lang="zh" id="langZh">CN</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" data-lang="en" id="langEn">EN</button>
+            </div>
             <button class="nav-toggle" id="navToggle" aria-label="菜单">
                 <span></span><span></span><span></span>
             </button>
@@ -40,13 +45,13 @@
                 <span class="hero-amp">&amp;</span>
                 <span class="hero-name">苏晨</span>
             </h1>
-            <p class="hero-sub">在光遇的天空下，相遇的故事</p>
-            <p class="hero-desc">
+            <p class="hero-sub" data-i18n="heroSub">在光遇的天空下，相遇的故事</p>
+            <p class="hero-desc" data-i18n="heroDesc">
                 每一件事都值得被记住<br>
                 每一封信都是一段回忆
             </p>
             <a href="#letters" class="btn-hero">
-                <span class="btn-text">阅读信笺</span>
+                <span class="btn-text" data-i18n="heroBtn">阅读信笺</span>
                 <span class="btn-arrow">→</span>
             </a>
             <div class="sky-candles">
@@ -57,7 +62,7 @@
             </div>
         </div>
         <div class="scroll-hint">
-            <span>展开信笺</span>
+            <span data-i18n="scrollHint">展开信笺</span>
             <div class="scroll-arrow"></div>
         </div>
     </section>
@@ -65,9 +70,9 @@
     <!-- ========== 信笺集 ========== -->
     <section class="letters" id="letters">
         <div class="section-header">
-            <span class="section-tag">✉ Letters</span>
-            <h2>信笺集</h2>
-            <p class="section-desc">按日期整理的点滴回忆</p>
+            <span class="section-tag" data-i18n="lettersTag">✉ Letters</span>
+            <h2 data-i18n="lettersTitle">信笺集</h2>
+            <p class="section-desc" data-i18n="lettersDesc">按日期整理的点滴回忆</p>
         </div>
 
         <div class="letters-timeline" id="lettersTimeline">
@@ -78,9 +83,9 @@
     <!-- ========== 相册 ========== -->
     <section class="album" id="album">
         <div class="section-header">
-            <span class="section-tag">📷 Album</span>
-            <h2>相册</h2>
-            <p class="section-desc">我们的照片记忆</p>
+            <span class="section-tag" data-i18n="albumTag">📷 Album</span>
+            <h2 data-i18n="albumTitle">相册</h2>
+            <p class="section-desc" data-i18n="albumDesc">我们的照片记忆</p>
         </div>
         <div class="album-wrapper">
             <div class="photo-book" id="photoBook">
@@ -112,16 +117,16 @@
         <div class="about-card">
             <div class="about-icon">☁️</div>
             <div class="section-tag">About</div>
-            <h2>关于我们</h2>
-            <p>
+            <h2 data-i18n="aboutTitle">关于我们</h2>
+            <p data-i18n="aboutP1">
                 曦月 &amp; 苏晨，因<strong>光遇</strong>而相识的好朋友。
             </p>
-            <p>
+            <p data-i18n="aboutP2">
                 我们在这片天空之下一起跑图、一起玩耍、一起看风景。
                 这些信记录了我们之间的点点滴滴——
                 每一次相遇、每一次冒险、每一次欢笑。
             </p>
-            <p class="about-sign">
+            <p class="about-sign" data-i18n="aboutSign">
                 致我们永远的好友 ✦
             </p>
         </div>
@@ -129,8 +134,8 @@
 
     <!-- ========== 页脚 ========== -->
     <footer class="footer">
-        <p>✦ 曦月 &amp; 苏晨 · 光遇友情记 ✦</p>
-        <p class="footer-sub">在天空王国相遇的故事</p>
+        <p data-i18n="footer">✦ 曦月 &amp; 苏晨 · 光遇友情记 ✦</p>
+        <p class="footer-sub" data-i18n="footerSub">在天空王国相遇的故事</p>
     </footer>
 
     <!-- ========== 信笺弹窗（点开信封后） ========== -->
