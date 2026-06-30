@@ -40,9 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 '🐱 苏晨家的小猫',
                 '🍎 穿了衣服的苹果',
                 '🙈 躲猫猫',
-                '🎨 苏晨画的猫 (1)',
-                '🎨 苏晨画的猫 (2)',
-                '🎨 苏晨画的猫 (3)',
                 '🏔️ 曦月拍的新疆喀什',
                 '🏔️ 喀什街景',
                 '🏔️ 新疆风光',
@@ -217,9 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 '🐱 Chen\'s Little Cat',
                 '🍎 The Apple Wore Clothes',
                 '🙈 Hide & Seek',
-                '🎨 Chen\'s Cat Drawing (1)',
-                '🎨 Chen\'s Cat Drawing (2)',
-                '🎨 Chen\'s Cat Drawing (3)',
                 '🏔️ Xiyue\'s Kashgar Photos',
                 '🏔️ Kashgar Street',
                 '🏔️ Xinjiang Scenery',
@@ -1076,9 +1070,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'images/cat.jpg' },
         { src: 'images/apple.jpg' },
         { src: 'images/hideandseek.jpg' },
-        { src: 'images/catdrawing_01.jpg' },
-        { src: 'images/catdrawing_02.jpg' },
-        { src: 'images/catdrawing_03.jpg' },
         { src: 'images/xinjiang_01.jpg' },
         { src: 'images/xinjiang_02.jpg' },
         { src: 'images/xinjiang_03.jpg' },
@@ -1255,6 +1246,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         modalBody.innerHTML = bodyContent;
 
+        // Annotate each section with the author's font class
+        let currentAuthor = '';
+        Array.from(modalBody.children).forEach(child => {
+            if (child.classList.contains('letter-from')) {
+                currentAuthor = child.textContent.includes('曦月') || child.textContent.includes('Xiyue')
+                    ? 'from-xiyue-text' : 'from-chen-text';
+            }
+            if (child.tagName === 'P' || child.classList.contains('letter-photo')) {
+                child.classList.add(currentAuthor);
+            }
+        });
+
         // Set postmark
         const paper = document.getElementById('modalPaper');
         const fdForPostmark = formatDate(letter.date);
@@ -1352,10 +1355,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.createElement('div');
         grid.className = 'album-page-grid';
 
+        // Decide which photo on this page is "featured" (larger)
+        const featuredIndex = Math.floor(Math.random() * pagePhotos.length);
+
         pagePhotos.forEach((photo, i) => {
             const item = document.createElement('div');
-            item.className = 'album-photo';
             const label = getAlbumLabel(start + i);
+
+            // Random slight rotation: -3deg to 3deg
+            const rotation = (Math.random() * 6 - 3).toFixed(1);
+            // Random vertical offset for staggered feel
+            const offsetY = (Math.random() * 8 - 4).toFixed(1);
+            // Random bottom padding variation (simulates different photo sizes)
+            const bottomPad = 16 + Math.floor(Math.random() * 10);
+
+            let className = 'album-photo';
+            if (i === featuredIndex && pagePhotos.length > 1) {
+                className += ' featured';
+            }
+
+            item.className = className;
+            item.style.transform = `rotate(${rotation}deg)`;
+            item.style.marginTop = `${offsetY}px`;
+            item.style.setProperty('--bottom-pad', `${bottomPad}px`);
+
             item.innerHTML = `
                 <img src="${photo.src}" alt="${label}" loading="lazy">
                 <div class="album-photo-label">${label}</div>
@@ -1364,13 +1387,16 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.appendChild(item);
         });
 
-        // Fill empty slots
+        // Fill empty slots with transparent placeholders
         for (let i = pagePhotos.length; i < PAGE_SIZE; i++) {
             const empty = document.createElement('div');
             empty.className = 'album-photo';
-            empty.style.opacity = '0.05';
-            empty.style.background = 'rgba(200,190,170,0.3)';
+            empty.style.opacity = '0';
             empty.style.cursor = 'default';
+            empty.style.pointerEvents = 'none';
+            empty.style.boxShadow = 'none';
+            empty.style.background = 'transparent';
+            empty.style.padding = '0';
             grid.appendChild(empty);
         }
 
