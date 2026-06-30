@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 10: 'Doubao gave me such flirty English templates hahaha',
                 11: 'This is my native language written in pinyin, I am not secretly cursing you',
                 12: "Happy Women's Day!🥳",
-                13: '👻 (sharing photos)',
+                13: '👻 (sharing aurora photos)',
                 14: "I hope you can feel happy every day, not just women's day",
                 15: 'Dreamed I was caught by bad guys who tried to kill me with two exercise books',
                 16: 'So sleepy after lunch, slept over two hours, can\'t sleep tonight again',
@@ -453,11 +453,23 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 13, date: '2026-03-08', icon: '📸',
             title: '极光合照',
-            preview: '👻（分享照片）',
+            preview: '👻（分享极光合照）',
             stamp: '✨',
             content: `
                 <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
                 <p>👻</p>
+                <div class="letter-photo"><img src="images/aurora_01.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_02.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_03.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_04.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_05.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_06.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_07.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_08.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_09.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_10.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_11.jpg" alt="极光合照"></div>
+                <div class="letter-photo"><img src="images/aurora_12.jpg" alt="极光合照"></div>
 `
         },
         {
