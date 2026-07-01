@@ -63,6 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 '✏️ 苏晨的简笔画 (1)',
                 '✏️ 苏晨的简笔画 (2)',
                 '✏️ 苏晨的简笔画 (3)',
+                '🌌 极光合照 (1)',
+                '🌌 极光合照 (2)',
+                '🌌 极光合照 (3)',
+                '🌌 极光合照 (4)',
+                '🌌 极光合照 (5)',
+                '🌌 极光合照 (6)',
+                '🌌 极光合照 (7)',
+                '🌌 极光合照 (8)',
+                '🌌 极光合照 (9)',
+                '🌌 极光合照 (10)',
+                '🌌 极光合照 (11)',
+                '🌌 极光合照 (12)',
             ],
         },
         en: {
@@ -207,6 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 55: "I can actually read Uyghur! Well, I used AI too haha",
                 56: 'I used to have a grey British Shorthair named Oreo',
                 57: 'Composition matters more than you think, you have real talent',
+                58: 'Missed You Again',
+                59: 'The Chihiro Sketch',
             },
             albumLabels: [
                 '🐱 Chen\'s Little Cat',
@@ -235,6 +249,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 '✏️ Chen\'s Doodles (1)',
                 '✏️ Chen\'s Doodles (2)',
                 '✏️ Chen\'s Doodles (3)',
+                '🌌 Aurora (1)',
+                '🌌 Aurora (2)',
+                '🌌 Aurora (3)',
+                '🌌 Aurora (4)',
+                '🌌 Aurora (5)',
+                '🌌 Aurora (6)',
+                '🌌 Aurora (7)',
+                '🌌 Aurora (8)',
+                '🌌 Aurora (9)',
+                '🌌 Aurora (10)',
+                '🌌 Aurora (11)',
+                '🌌 Aurora (12)',
             ],
         }
     };
@@ -1088,6 +1114,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
                 <p>我今天看到你了，一点左右，你在吃粽子，我看到你点亮心火，提示是现在，我立马上线，然后看到你在锅旁边睡着了，过了几分钟后你不见了，我以为串了，结果回家一看你不在线了，这次有没有见到呜呜呜呜</p>
 `
+        },
+        {
+            id: 59, date: '2026-06-30', icon: '🎨',
+            title: '素描千寻',
+            preview: '那是我唯一一个画的素描人像，很早之前画的，现在估计也画不出来了',
+            stamp: '✏️',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>那是我唯一一个画的素描人像，很早之前画的，我现在估计也画不出来了，那个时候我真有耐心啊哈哈哈哈哈哈哈🤣现在不一定有用这个耐心了</p>
+<p>哇，我觉得你们家算是艺术世家吧哈哈哈哈哈哈，家庭的艺术氛围应该是相当浓厚了🫡</p>
+<p>🤣其实我自己每次看我生日的时候也得查查日历什么时候的，不然根本不知道</p>
+<p>我还记得上次在游戏里面给我过生日，其实也是我人生中第一次在游戏里面过生日，所以我觉得我也要给你准备一些special的东西，我想着你应该肯定没有收到过（但是调门也不敢起太高哈哈哈哈哈哈哈），具体是什么我先我先保留一个秘密~主要是我现在也没搞完嘿嘿😁</p>
+<p>我先回一下你的这封邮件哈，其他的我再慢慢回复哈哈哈哈</p>
+<p>Best，<br>月</p>
+`
         }
     ];
 
@@ -1118,9 +1159,19 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'images/newyear_starfield_02.jpg' },
         { src: 'images/newyear_starfield_03.jpg' },
         { src: 'images/newyear_starfield_04.jpg' },
-        { src: 'images/doodle_chen_01.jpg' },
-        { src: 'images/doodle_chen_02.jpg' },
         { src: 'images/doodle_chen_03.jpg' },
+        { src: 'images/aurora_01.jpg' },
+        { src: 'images/aurora_02.jpg' },
+        { src: 'images/aurora_03.jpg' },
+        { src: 'images/aurora_04.jpg' },
+        { src: 'images/aurora_05.jpg' },
+        { src: 'images/aurora_06.jpg' },
+        { src: 'images/aurora_07.jpg' },
+        { src: 'images/aurora_08.jpg' },
+        { src: 'images/aurora_09.jpg' },
+        { src: 'images/aurora_10.jpg' },
+        { src: 'images/aurora_11.jpg' },
+        { src: 'images/aurora_12.jpg' },
     ];
 
     // ========================================
