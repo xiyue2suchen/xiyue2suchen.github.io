@@ -170,6 +170,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 65: 'Cat Sensitive to Snacks',
                 66: 'AI Wave & Novel Writing',
                 67: 'Xinjiang Travel & Lakes',
+                68: 'AI Music Project',
+                69: 'Cloud Grassland',
+                70: 'Feeling Lost & Lying Flat',
+                71: 'Sleep Well Eat Well',
+                72: 'Pavlov\'s Cat',
+                73: 'White Sand Lake & Poem',
+                74: 'Sweet-Bittersweet Novel',
             },
             letterPreviews: {
                 1: 'Dear 苏晨，This is 曦月.',
@@ -239,6 +246,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 65: 'My cat is super sensitive to the sound of snack packaging opening',
                 66: 'AI really is the next wave, I would write sweet-bittersweet stories',
                 67: 'Xinjiang has so many beautiful landscapes, the lake was like a blue gemstone',
+                68: 'Used to go to many concerts, now thinking about making AI-generated music~',
+                69: 'Cloud Grassland is such a poetic name, I can already picture the scenery😆',
+                70: 'Too many things at once, energy is scattered, need to find a main focus🫠',
+                71: 'Sleep is more important than diet, which is more important than exercise',
+                72: 'Conditioned reflex from feeding too much, Pavlov\'s dog, Chen\'s cat🤣',
+                73: 'White Sand Lake is the Atlantic\'s last scattered blue gem, wrote a poem~',
+                74: 'I studied diabetes in grad school hahaha, looking forward to your novel😏',
             },
             albumLabels: [
                 '🐱 Chen\'s Little Cat',
@@ -1241,15 +1255,110 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>但是那边飞虫好多OMG，还有动物排泄物，如果没有飞虫和排泄物那个湖也是夯爆了</p>
 |            `
         }
-    ];
-
-    // ========================================
-    // 相册数据
-    // ========================================
-    const albumPhotos = [
-        { src: 'images/cat.jpg' },
-        { src: 'images/apple.jpg' },
-        { src: 'images/hideandseek.jpg' },
+        {
+            id: 68, date: '2026-07-16', icon: '🎵',
+            title: 'AI音乐项目',
+            preview: '以前看演唱会很多，现在想尝试做AI生成音乐~',
+            stamp: '🎶',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>我以前看演唱会音乐会还挺多的，现在目前少了很多~</p>
+<p>目前我现在其实在考虑做一个AI生成音乐的项目尝试，然后发现网易云上有好多音乐是AI生成的，听着旋律还不错</p>
+<p>然后准备，哎，看看有时间我也自己搞一个AI音乐哈哈哈哈哈哈哈，脑子里想法很多，干啥都是三分钟热度，但是喜欢折腾~</p>
+<p>Best,<br>曦月</p>
+`
+        },
+        {
+            id: 69, date: '2026-07-16', icon: '☁️',
+            title: '云上草原',
+            preview: '哇塞居然还有雪，云上草原好有诗意的名字~😆',
+            stamp: '🏔️',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>哎呀，要两个小时啊，那还挺远的。哇塞！！！居然还有雪，这也太棒了吧！！！！</p>
+<p>嗯，那说明这个山还是蛮高的，一次还爬不完哈哈哈哈哈哈哈哈哈哈哈哈</p>
+<p>哇！！云上草原，好有诗意的名字~</p>
+<p>我已经脑补了那种蓝天白云环绕青草花香的山坡上，我躺在草地上，微风吹拂，牛羊低语的场景了~~😆</p>
+<p>Best,<br>yue</p>
+`
+        },
+        {
+            id: 70, date: '2026-07-16', icon: '🤔',
+            title: '迷茫与躺平',
+            preview: '同时做的事情太多了精力很分散，还是要有主线才行🫠',
+            stamp: '💼',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>其实我感觉我有段时间挺迷茫的~😅</p>
+<p>因为同时做的事情太多了，精力也很分散，所以我想着可能还是要有一个主线才行哈哈哈🫠</p>
+<p>目前差不多同时在尝试AI创业，也在搞一些公务员事业编的考试，，然后也暂时加入了一个辅导机构</p>
+<p>我那个公务员的事业编的好是差不多两个人报了两百个人，一比一百多竞争比，然后教师编好像好一点，大概一比十多一点</p>
+<p>其实我是真不想卷，我就想躺平，可能等我什么时候副业做起来了，我就可以躺平了哈哈哈哈哈哈😂🤣🤣</p>
+<p>哦对了，我在附件中放了一个我前些时间搞了一个小游戏，通过AI编程的方式，嗯，因为我发现其实我之前挺喜欢心理学的，然后我发现很多心理学测试可能比较枯燥，然后我就想着能否把它游戏化😝增加一些趣味性，然后搞了这样的一个作品，当然你也可以测一测看哈哈哈哈</p>
+<p>Best,<br>幻想躺平的曦月</p>
+                <div class="letter-photo"><img src="images/email109_35.png" alt="曦月的AI小游戏"></div>
+`
+        },
+        {
+            id: 71, date: '2026-07-16', icon: '😴',
+            title: '睡好吃好最重要',
+            preview: '我现在的优先级是睡眠大于饮食大于运动，睡好吃好真的很重要',
+            stamp: '🛏️',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>那基本上应该就是你一个人住了哈哈哈哈哈</p>
+<p>哇，你这实习地点离地好近啊，这运气真的是太牛了🎉😆😆</p>
+<p>有时间赶紧去抽个奖吧，去刮个彩票😏说不定还真的可以哈哈哈哈哈</p>
+<p>另外，因为我是学生物的嘛，现在是越来越觉得睡眠很重要，我现在的优先级是睡眠大于饮食大于运动</p>
+<p>嗯，我应该也是那种高敏感型人，对环境的敏感度很高哈哈哈哈，所以有时候出门旅行住在青旅的话会容易失眠哈哈哈，时候太累了也会放纵自己睡到中午起床。</p>
+<p>真的，睡好吃好真的很重要哈哈哈</p>
+<p>Best，<br>努力睡好吃好的曦月</p>
+`
+        },
+        {
+            id: 72, date: '2026-07-16', icon: '🐱',
+            title: '巴甫洛夫的猫',
+            preview: '喂食多了形成条件反射了，巴甫洛夫的狗，苏晨家的猫🤣',
+            stamp: '🐾',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>哈哈哈哈哈哈喂食多了这是，已经形成条件反射了可能🤪</p>
+<p>巴甫洛夫的狗，苏晨家的猫🐱🤣🤣🤣</p>
+<p>参赛呀，哎，我还蛮好奇这个抽象比赛的奖项会不会也很抽象哈哈哈哈哈</p>
+<p>Best,<br>yue</p>
+                <div class="letter-photo"><img src="images/email111_36.jpg" alt="苏晨的简笔画1"></div>
+                <div class="letter-photo"><img src="images/email111_37.jpg" alt="苏晨的简笔画2"></div>
+                <div class="letter-photo"><img src="images/email111_38.jpg" alt="苏晨的简笔画3"></div>
+                <div class="letter-photo"><img src="images/email111_39.jpg" alt="苏晨的简笔画4"></div>
+`
+        },
+        {
+            id: 73, date: '2026-07-16', icon: '🌊',
+            title: '白沙湖与打油诗',
+            preview: '白沙湖是大西洋最后一颗散落的蓝宝石，随手写了首打油诗~',
+            stamp: '🏔️',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>是滴~~其实后来想想，每个时候有每个时候的美~最好的办法就是完整待一年或者像你一样一直住在这里😁</p>
+<p>在一个风景美的地方，心情也会格外的好~</p>
+<p>看来，如果说赛里木湖是大西洋的最后一滴眼泪，那么白沙湖就是大西洋最后一颗散落的蓝宝石（或者倒数第二滴眼泪哈哈哈哈）</p>
+<p>你说的这个点倒也是哈哈哈哈，脑部了一个画面（顺手写了一首打油诗哈哈哈哈哈）：</p>
+<p>微风青草雪山芬，<br>碧水白沙映霞云。<br>正欲深吸清透气，<br>飞虫迷眼粪销魂。</p>
+<p>哈哈哈哈哈哈哈哈</p>
+<p>Best,<br>写打油诗的曦月</p>
+`
+        },
+        {
+            id: 74, date: '2026-07-16', icon: '📖',
+            title: '甜中带虐的小说剧情',
+            preview: '我读研期间就是研究的糖尿病哈哈哈哈哈，很期待你的小说😏',
+            stamp: '✍️',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>哈哈哈哈哈 甜中带虐 虐中带甜的小说剧情</p>
+<p>我也担心太甜得糖尿病哈哈哈哈哈，很期待你的小说😏</p>
+<p>By the way, 我读研期间就是研究的糖尿病哈哈哈哈哈哈，可太懂了🤣🤣</p>
+<p>Best，<br>曦月</p>
         { src: 'images/xiyue_xinjiang.jpg' },
         { src: 'images/crystal_01.jpg' },
         { src: 'images/crystal_02.jpg' },

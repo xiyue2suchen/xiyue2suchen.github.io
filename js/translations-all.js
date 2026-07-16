@@ -613,4 +613,82 @@ const lettersContentEn = {
                 <p>But there were so many bugs there OMG, and animal droppings too. If it weren't for the bugs and droppings, that lake would be absolutely stunning</p>
 
 `,
+  "68": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>I used to go to concerts and live music events quite a lot, but not so much anymore~</p>
+<p>Right now I'm actually thinking about trying an AI music generation project. I discovered that on NetEase Cloud Music there's a lot of AI-generated music, and the melodies sound pretty good</p>
+<p>So I'm thinking, hey, maybe when I have time I'll make my own AI music too hahahahaha. I have lots of ideas in my head, get excited about things for three minutes at a time, but I love tinkering~</p>
+<p>Best,<br>曦月</p>
+
+`,
+  "69": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Oh my, two hours away — that's pretty far. Wow!!! There's even snow?! That's so amazing!!!!</p>
+<p>Hmm, that means the mountain is pretty tall — can't even climb it all in one go hahahahahahahahaha</p>
+<p>Wow!! Cloud Grassland, what a poetic name~</p>
+<p>I can already picture it — a hillside surrounded by blue sky, white clouds, green grass, and the scent of wildflowers. Me lying on the grass, a gentle breeze blowing, cattle and sheep murmuring in the distance~~😆</p>
+<p>Best,<br>yue</p>
+
+`,
+  "70": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Actually, I feel like I've been quite lost for a while~😅</p>
+<p>Because I'm doing too many things at once, my energy is scattered, so I think I need to find one main focus hahaha🫠</p>
+<p>Right now I'm simultaneously trying an AI startup, studying for civil service and public institution exams, and temporarily joined a tutoring organization</p>
+<p>The competition ratio for the civil service exam is about 200 people for 2 spots — over 100:1. The teacher recruitment exam is a bit better, around 10:1 or so</p>
+<p>Honestly, I really don't want to compete. I just want to lie flat. Maybe once my side hustle takes off, I can finally lie flat hahahahaha😂🤣🤣</p>
+<p>Oh, by the way, I attached a little game I made recently using AI programming. I discovered I actually really like psychology, and I found that many psychological tests can be pretty boring, so I thought — could I gamify them?😝 Make it more fun. So I created this little project. Feel free to try it out hahaha</p>
+<p>Best,<br>Xiyue who dreams of lying flat</p>
+                <div class="letter-photo"><img src="images/email109_35.png" alt="Xiyue's AI Game"></div>
+
+`,
+  "71": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>So basically it'll just be you living alone hahahahaha</p>
+<p>Wow, your internship location is so close to school — that's incredibly lucky🎉😆😆</p>
+<p>You should go buy a lottery ticket sometime, scratch a ticket😏 Who knows, maybe you'll actually win hahahaha</p>
+<p>Also, since I studied biology, I'm increasingly realizing how important sleep is. My current priority is sleep > diet > exercise</p>
+<p>Yeah, I think I'm also a highly sensitive person — very sensitive to my environment hahaha. So sometimes when I travel and stay in hostels, I tend to have trouble sleeping. Other times, when I'm really exhausted, I let myself sleep in until noon.</p>
+<p>Really, sleeping well and eating well are super important hahaha</p>
+<p>Best,<br>Xiyue who's trying to sleep and eat well</p>
+
+`,
+  "72": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Hahahahaha you've been feeding her so much she's developed a conditioned reflex🤪</p>
+<p>Pavlov's dog, Chen's cat🐱🤣🤣🤣</p>
+<p>Enter a competition? Oh, I'm really curious — would the prizes for an abstract art competition be abstract too? hahahaha</p>
+<p>Best,<br>yue</p>
+                <div class="letter-photo"><img src="images/email111_36.jpg" alt="Chen's Doodle 1"></div>
+                <div class="letter-photo"><img src="images/email111_37.jpg" alt="Chen's Doodle 2"></div>
+                <div class="letter-photo"><img src="images/email111_38.jpg" alt="Chen's Doodle 3"></div>
+                <div class="letter-photo"><img src="images/email111_39.jpg" alt="Chen's Doodle 4"></div>
+
+`,
+  "73": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Exactly~~ Actually, when you think about it, every season has its own beauty~ The best way is to stay a full year, or do what you do and just live here😁</p>
+<p>In a place with beautiful scenery, your mood is naturally better~</p>
+<p>So, if Sayram Lake is the last tear of the Atlantic, then White Sand Lake is the Atlantic's last scattered blue gemstone (or the second-to-last tear, hahaha)</p>
+<p>Your point is so true hahaha, I'm picturing it now (and I just happened to write a little poem hahahaha):</p>
+<p>Gentle breeze, green grass, snowy peaks fragrant,<br>Clear water, white sand, reflecting rosy clouds.<br>Just about to take a deep, refreshing breath —<br>Flies in the eyes and dung steals the show.</p>
+<p>Hahahahahahaha</p>
+<p>Best,<br>Xiyue the poem writer</p>
+
+`,
+  "74": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Hahahaha — sweet with a touch of bitter, bitter with a touch of sweet — that kind of novel plot</p>
+<p>I'm also worried about getting diabetes from too much sweetness hahahaha, looking forward to your novel😏</p>
+<p>By the way, my research during grad school was on diabetes hahahahaha — I know way too much about it🤣🤣</p>
+<p>Best,<br>曦月</p>
+
+`,
 };
