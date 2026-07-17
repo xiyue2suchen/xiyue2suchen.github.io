@@ -691,4 +691,74 @@ const lettersContentEn = {
 <p>Best,<br>曦月</p>
 
 `,
+  "75": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>Three minutes has its rewards too — I also have a three-minute passion. I saw skateboarding videos and thought it looked so cool, so I bought a skateboard and tried it. Then I saw videos of people breaking bones from skateboarding and got too scared to practice😆 Now it's just collecting dust</p>
+
+`,
+  "76": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>You imagined it right — Cloud Grassland has horses and sheep, horses grazing, green grass, blue sky with just a few clouds. Pretty much exactly what you pictured hahahaha</p>
+
+`,
+  "77": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>The competition is really fierce😲</p>
+<p>I want to compete but I've been lying flat all along😅</p>
+<p>Hope your side hustle takes off so you can achieve that lie-flat life soon😁</p>
+<p>I clicked the test but nothing happened — do I need to download some software? The page just doesn't move🤨</p>
+                <div class="letter-photo"><img src="images/email116_40.png" alt="Chen's test page screenshot"></div>
+
+`,
+  "78": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>The first time I bought a 10-yuan scratch ticket I won 100 yuan, then I bought another 10-yuan ticket and won 40. I spent all the money I won that same day. Later when I went out to play and bought a few more tickets, I didn't win anything😆</p>
+<p>Yeah, sleep is really important. I used to be fine after running 800 meters, and carrying 100 jin was easy. But this year I've been staying up way too much — after running 800 meters I coughed for a week, can't even carry 100 jin anymore, feel weak every day, like a useless dog😩</p>
+
+`,
+  "79": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>Hahahahaha another little orange kitten showed up at home🥰 It's so tiny, only the size of my palm, and it likes to sleep leaning against my back. I'm scared I'll roll over and crush it🙀</p>
+<p>In the end there was no competition — the teacher was just joking with us😆</p>
+                <div class="letter-photo"><img src="images/email118_41.jpg" alt="Little orange kitten 1"></div>
+                <div class="letter-photo"><img src="images/email118_42.jpg" alt="Little orange kitten 2"></div>
+                <div class="letter-photo"><img src="images/email118_43.jpg" alt="Little orange kitten 3"></div>
+                <div class="letter-photo"><img src="images/email118_44.jpg" alt="Little orange kitten 4"></div>
+
+`,
+  "80": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>I think I didn't express myself clearly — I said the Ka-something Lake was like a sapphire, not White Sand Lake👻</p>
+<p>Because I forgot the full name of that lake, I only remember it has "Ka" in it</p>
+
+`,
+  "81": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>Hey, I hadn't finished writing yet, I accidentally pressed send</p>
+<p>Because I only remember the lake's name has "Ka" and "Le" in it🤡</p>
+
+`,
+  "82": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>Ah, I forgot again</p>
+<p>The poem you wrote is really good hahahaha</p>
+<p>Very vivid and visual</p>
+<p>Simple and easy to understand but not cheesy</p>
+
+`,
+  "83": `
+
+                <div class="letter-from" data-i18n-raw="fromChen">—— From Chen ——</div>
+                <p>I don't write novels, my writing skills are not good enough. Just writing an 800-word essay is a struggle for me now😇</p>
+<p>So you're a diabetes expert — then this novel is yours to write! You're the expert, you can control the sugar better😃</p>
+
+`,
 };

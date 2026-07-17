@@ -177,6 +177,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 72: 'Pavlov\'s Cat',
                 73: 'White Sand Lake & Poem',
                 74: 'Sweet-Bittersweet Novel',
+                75: 'Three Minutes of Passion',
+                76: 'Real Cloud Grassland',
+                77: 'Trying to Lie Flat',
+                78: 'Lottery Luck & Sleep Loss',
+                79: 'New Little Orange Kitten',
+                80: 'The Ka-something Lake',
+                81: 'Accidental Send',
+                82: 'Lovely Poem!',
+                83: 'Diabetes Expert',
             },
             letterPreviews: {
                 1: 'Dear 苏晨，This is 曦月.',
@@ -253,6 +262,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 72: 'Conditioned reflex from feeding too much, Pavlov\'s dog, Chen\'s cat🤣',
                 73: 'White Sand Lake is the Atlantic\'s last scattered blue gem, wrote a poem~',
                 74: 'I studied diabetes in grad school hahaha, looking forward to your novel😏',
+                75: 'I have three-minute passion too — bought a skateboard then saw people breaking bones and got scared😆',
+                76: 'Cloud Grassland has horses and sheep, just like you imagined hahaha',
+                77: 'The competition is fierce, I want to be competitive but I keep lying flat😅',
+                78: 'First scratch ticket won 100 yuan, spent it all! Staying up too much has made me weak😩',
+                79: 'A new little orange kitten showed up, only the size of my palm, loves to sleep against my back🥰',
+                80: 'I didn\'t explain clearly — I meant the Ka-something Lake was like a sapphire, not White Sand Lake👻',
+                81: 'I wasn\'t finished writing, accidentally pressed send🤡',
+                82: 'Your poem is really good! Vivid and simple, not cheesy at all hahaha',
+                83: 'I can\'t write novels, my writing is not good enough. You\'re the diabetes expert, you control the sugar😃',
             },
             albumLabels: [
                 '🐱 Chen\'s Little Cat',
@@ -1253,8 +1271,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
                 <p>在新疆旅游选好时间去真的很重要，新疆的风景真的挺多的，有好几个国家的风景都可以在新疆看到，我上次去喀什那边玩，天气好，去看了白沙湖，还有一个叫喀什么勒湖，喀什么湖非常好看我觉得，比白沙湖更喜欢，那个湖水很蓝，前面就是雪山，然后水也很清澈，像蓝色宝石，给我一种赛里木湖的兄弟的感觉，那水我真喜欢，真干净</p>
 <p>但是那边飞虫好多OMG，还有动物排泄物，如果没有飞虫和排泄物那个湖也是夯爆了</p>
-|            `
-        }
+            `
+        },
         {
             id: 68, date: '2026-07-16', icon: '🎵',
             title: 'AI音乐项目',
@@ -1359,6 +1377,117 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>我也担心太甜得糖尿病哈哈哈哈哈，很期待你的小说😏</p>
 <p>By the way, 我读研期间就是研究的糖尿病哈哈哈哈哈哈，可太懂了🤣🤣</p>
 <p>Best，<br>曦月</p>
+            `
+        },
+        {
+            id: 75, date: '2026-07-16', icon: '🎵',
+            title: '三分钟热度',
+            preview: '我也是三分钟热度，买了滑板试了一下刷到摔骨折了不敢练了😆',
+            stamp: '🎶',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>三分钟有三分钟的收获，我也是三分钟热度，之前看滑滑板的视频觉得好帅，然后买了个滑板试了一下后面刷到滑滑板摔骨折了，这折了那折了不敢练😆放着落灰了都</p>
+            `
+        },
+        {
+            id: 76, date: '2026-07-16', icon: '☁️',
+            title: '云上草原有马有羊',
+            preview: '云上草原有马有羊，蓝天白云，和你想的差不多哈哈哈哈哈',
+            stamp: '🏔️',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>你想象得不错，云上草原有马有羊，马在吃草，草也绿的，天空蓝的云朵不多，但和你想的差不多哈哈哈哈哈</p>
+            `
+        },
+        {
+            id: 77, date: '2026-07-16', icon: '💼',
+            title: '想卷但躺平',
+            preview: '竞争好大，我是想卷但一直在躺平😅祝你副业早日做起来！',
+            stamp: '💪',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>竞争真的好大呀😲</p>
+<p>我是想卷 但一直在躺平😅</p>
+<p>祝你副业能够做起来早日实现躺平生活😁</p>
+<p>我点了去测没反应 难道要下一些软件嘛 页面一动也不动🤨</p>
+                <div class="letter-photo"><img src="images/email116_40.png" alt="苏晨的测试页面截图"></div>
+            `
+        },
+        {
+            id: 78, date: '2026-07-16', icon: '🎫',
+            title: '彩票与睡眠',
+            preview: '第一次刮彩票中了一百，全花了！熬夜太多现在虚狗一个😩',
+            stamp: '😴',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>我以前第一次刮十块钱的彩票中了一百，然后又挂了一个十块钱的中了四十，然后当天我都把中的钱全花了，后面在出去玩的时候挂了几个都没中😆</p>
+<p>是啊，睡眠真的太重要了，我以前跑完八百也不会累趴下，抱个一百斤也轻轻松松，但今年熬夜有点太多了，跑八百完咳嗽了一周，一百斤我也抱不起来，每天有气无力的，虚狗一个😩</p>
+            `
+        },
+        {
+            id: 79, date: '2026-07-16', icon: '🐱',
+            title: '小橘猫来啦',
+            preview: '家里又来了一只小橘猫，只有巴掌那么大，喜欢靠着我背睡🥰',
+            stamp: '🧡',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>哈哈哈哈哈哈 家里又来了一只小橘猫🥰 它好小，只有我巴掌那么大，它还喜欢靠着我背睡，我怕一翻身就把它压扁了🙀</p>
+<p>最后也没有参赛 老师就是开玩笑逗我们😆</p>
+                <div class="letter-photo"><img src="images/email118_41.jpg" alt="小橘猫1"></div>
+                <div class="letter-photo"><img src="images/email118_42.jpg" alt="小橘猫2"></div>
+                <div class="letter-photo"><img src="images/email118_43.jpg" alt="小橘猫3"></div>
+                <div class="letter-photo"><img src="images/email118_44.jpg" alt="小橘猫4"></div>
+            `
+        },
+        {
+            id: 80, date: '2026-07-16', icon: '🌊',
+            title: '喀什么湖',
+            preview: '我说的是喀什么湖像蓝宝石，不是白沙湖👻忘记全名了',
+            stamp: '🏔️',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>看来是我没表达清楚，我说的是喀什么湖像蓝宝石，不是白沙湖👻</p>
+<p>因为我忘记那个湖的全名了，只记得有"喀"</p>
+            `
+        },
+        {
+            id: 81, date: '2026-07-16', icon: '📝',
+            title: '误触发送',
+            preview: '我还没写完呢，误触就发过去了🤡只记得湖名有"喀"和"勒"',
+            stamp: '😅',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>诶 我还没写完呢，误触就发过去了</p>
+<p>因为我只记得那个湖的名字有"喀"和"勒"两个字🤡</p>
+            `
+        },
+        {
+            id: 82, date: '2026-07-16', icon: '✍️',
+            title: '诗写得真好',
+            preview: '你的诗很不错！很形象有画面，简单易懂又不俗哈哈哈哈哈',
+            stamp: '📜',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>害 我又忘记了</p>
+<p>你写的诗很不错哈哈哈哈哈</p>
+<p>很形象有画面</p>
+<p>简单易懂又不俗</p>
+            `
+        },
+        {
+            id: 83, date: '2026-07-16', icon: '📖',
+            title: '糖尿病专家',
+            preview: '我不写小说文笔不够，你是糖尿病专家，你来控制糖分😃',
+            stamp: '😄',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
+                <p>我不写小说，我文笔不够，现在的我写个800字的作文都够呛😇</p>
+<p>原来你是糖尿病专家  那这个小说交给你了，你是专家，能更好地控制好糖分😃</p>
+            `
+        },
+    ];
+
+const albumPhotos = [
         { src: 'images/xiyue_xinjiang.jpg' },
         { src: 'images/crystal_01.jpg' },
         { src: 'images/crystal_02.jpg' },
