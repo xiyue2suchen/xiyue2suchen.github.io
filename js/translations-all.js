@@ -761,4 +761,92 @@ const lettersContentEn = {
 <p>So you're a diabetes expert — then this novel is yours to write! You're the expert, you can control the sugar better😃</p>
 
 `,
+  "84": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Hey, I am also really happy to have met a friend like you, Su Chen</p>
+<p>And through you I got to know so many other really nice friends</p>
+<p>Actually I used to be a solo player, but after meeting you I discovered you can actually visit scenic spots haha</p>
+                <div class="letter-photo"><img src="images/email123_45.jpg" alt="Xiyue's crystal balls and rainbow island-1"></div>
+                <div class="letter-photo"><img src="images/email123_46.jpg" alt="Xiyue's crystal balls and rainbow island-2"></div>
+<p>Best,<br>Xiyue</p>
+
+`,
+  "85": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Thank you, Su Chen!~</p>
+<p>Suzhou gardens basically have all kinds of koi wherever there is a lake</p>
+<p>Once a friend came to visit me and we ended up feeding fish at the park for an entire afternoon🤣</p>
+<p>Rather than feeding fish, I would rather slack off hahaha🌝</p>
+
+`,
+  "86": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Hahahahaha you are right, three minutes has its own brilliance. There are so many wonderful things in this world worth experiencing, and life is limited, so experiencing and trying more is a kind of brilliance~~</p>
+<p>But that fracture of yours was really careless, it sounds so painful just hearing about it😷 Please take good care of yourself in the future😂 seriously</p>
+<p>Best,<br>xiyue</p>
+
+`,
+  "87": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>😎nice</p>
+<p>Haha</p>
+
+`,
+  "88": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>You should open it with a browser, like Google Chrome, Firefox, or something hh</p>
+<p>No worries, I will figure out how to put it online later hahaha</p>
+<p>Xiyue</p>
+
+`,
+  "89": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Wow!! Such luck</p>
+<p>I have also bought lottery tickets many times, never won more than 5 yuan hahaha at most bought a pack of spicy strips and that was it</p>
+<p>Yep, according to modern health science, sleep > diet > exercise</p>
+<p>Running realms often is tiring hhh😏</p>
+<p>But seriously, you really need to take good care of yourself haha</p>
+<p>Xiyue</p>
+
+`,
+  "90": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Is it a newborn kitten from your cat?</p>
+<p>If it likes to sleep leaning against your back, then it probably sees you as its mom already haha</p>
+<p>I see, your teacher has a good sense of humor, so class is not too boring hhh🤣</p>
+
+`,
+  "91": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Hahaha is it Karakul Lake?</p>
+<p>You might remember it in Uyghur as قاراكۆل😏</p>
+<p>I looked up pictures and it really is stunning😲 No wonder you compared it to a sapphire</p>
+<p>And the limerick took a long time to think of😂 hahahaha</p>
+                <div class="letter-photo"><img src="images/email130_52.png" alt="Karakul Lake"></div>
+
+`,
+  "92": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>Silly egg is actually pretty cute hahahahaha, it sounds like Northeastern dialect</p>
+<p>I have noticed Northeastern dialect is really interesting, like silly old man, corn grits flavor😂 bro</p>
+
+`,
+  "93": `
+
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— From Xiyue ——</div>
+                <p>AI writes well, you just need to tell AI your general story background setting, who you want to pair with whom, and your preferred writing style, it can all be specified haha, I am not really good at writing these either</p>
+<p>I study how to cure diabetes, not how to give people diabetes 👀</p>
+<p>No wonder they say we end up becoming what we hate hahahaha🤣🤣🤣</p>
+<p>Xiyue</p>
+
+`,
 };

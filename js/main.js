@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 '🌌 极光合照 (10)',
                 '🌌 极光合照 (11)',
                 '🌌 极光合照 (12)',
+                '💎 曦月的水晶球与彩虹岛 (1)',
+                '💎 曦月的水晶球与彩虹岛 (2)',
+                '🏞️ 喀拉库勒湖',
             ],
         },
         en: {
@@ -186,9 +189,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 81: 'Accidental Send',
                 82: 'Lovely Poem!',
                 83: 'Diabetes Expert',
+                84: 'Crystal Balls and Rainbow Island',
+                85: 'Feeding Koi Reply',
+                86: 'Three Minutes of Brilliance',
+                87: 'Aurora Photos Reply',
+                88: 'Open with Browser',
+                89: 'Lottery Luck and Sleep',
+                90: 'Little Orange Kitten Reply',
+                91: 'Karakul Lake',
+                92: 'Silly Egg is Northeastern Dialect',
+                93: 'Researching to Cure Diabetes',
             },
             letterPreviews: {
                 1: 'Dear 苏晨，This is 曦月.',
+                84: 'So happy to have met a friend like you~',
+                85: 'Suzhou gardens have koi in every lake, would rather slack off than feed fish',
+                86: 'Three minutes has its own brilliance, life is about experiencing~',
+                87: '😎nice haha',
+                88: 'Try opening with a browser, I will figure out how to host it later',
+                89: 'Never won more than 5 yuan on lottery, sleep > diet > exercise',
+                90: 'The kitten sees you as its mom~ Your teacher sounds pretty funny',
+                91: 'Is it Karakul Lake? In Uyghur: قاراكۆل, the water looks like a sapphire~',
+                92: 'Silly egg is a cute word, sounds like Northeastern dialect~',
+                93: 'AI writing is easy, I study how to cure diabetes not how to get it haha',
                 2: 'My little cat 🤓',
                 3: 'An apple I ate the other day, it was shy and put on clothes 🤣',
                 4: "I secretly shared my breakfast with my cat again today 🤣",
@@ -311,6 +334,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 '🌌 Aurora (10)',
                 '🌌 Aurora (11)',
                 '🌌 Aurora (12)',
+                '💎 Xiyue Crystal and Rainbow Island (1)',
+                '💎 Xiyue Crystal and Rainbow Island (2)',
+                '🏞️ Karakul Lake',
             ],
         }
     };
@@ -1482,8 +1508,136 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="letter-from" data-i18n-raw="fromChen">—— 来自 苏晨 ——</div>
                 <p>我不写小说，我文笔不够，现在的我写个800字的作文都够呛😇</p>
-<p>原来你是糖尿病专家  那这个小说交给你了，你是专家，能更好地控制好糖分😃</p>
+                <p>原来你是糖尿病专家  那这个小说交给你了，你是专家，能更好地控制好糖分😃</p>
             `
+        },
+        {
+            id: 84, date: '2026-07-24', icon: '💎',
+            title: '水晶球和彩虹岛',
+            preview: '我也很开心遇到像苏晨你这样子的小伙伴~',
+            stamp: '🌈',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>哎，我也很开心遇到像苏晨你这样子的小伙伴</p>
+<p>而且还通过你认识了其他很多非常多nice的小伙伴</p>
+<p>其实我以前都是独狼玩法，发然遇到之后才发现原来还可以打卡景点呀哈哈哈</p>
+                <div class="letter-photo"><img src="images/email123_45.jpg" alt="曦月拍的水晶球与彩虹岛-1"></div>
+                <div class="letter-photo"><img src="images/email123_46.jpg" alt="曦月拍的水晶球与彩虹岛-2"></div>
+<p>Best，<br>曦月</p>
+`
+        },
+        {
+            id: 85, date: '2026-07-24', icon: '🐟',
+            title: '喂锦鲤的回复',
+            preview: '苏州园林只要有湖就会养锦鲤，喂鱼不如摸鱼哈哈哈',
+            stamp: '🌝',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>谢谢你苏晨！~</p>
+<p>苏州园林基本上只要有湖都会养各种各样的锦鲤</p>
+<p>有一次我有个朋友来找我玩，最后我俩跑到公园喂了一下午的鱼🤣</p>
+<p>比起来喂鱼，我更想摸鱼哈哈哈哈🌝</p>
+`
+        },
+        {
+            id: 86, date: '2026-07-24', icon: '⏰',
+            title: '三分钟的精彩',
+            preview: '三分钟有三分钟的精彩，多去体验才是人生~',
+            stamp: '🌟',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>哈哈哈哈哈哈哈你说的对，三分钟有三分钟的精彩 。这个世界上有那么多的精彩的事情值得体验，生命是有限的，所以多去体验和尝试未尝是一种精彩~~</p>
+<p>不过你这骨折也太不小心了吧，我听着都感觉很疼呀😷以后还是尽可能好好保护自己吧😂真的得</p>
+<p>Best，<br>xiyue</p>
+`
+        },
+        {
+            id: 87, date: '2026-07-24', icon: '📸',
+            title: '极光合照回复',
+            preview: '😎nice 哈哈哈',
+            stamp: '🆒',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>😎nice</p>
+<p>哈哈哈</p>
+`
+        },
+        {
+            id: 88, date: '2026-07-24', icon: '🌐',
+            title: '用浏览器打开',
+            preview: '应该用浏览器打开，后面我看看怎么上线哈哈哈',
+            stamp: '💻',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>应该是用浏览器打开，比如谷歌浏览器，火狐浏览器什么的hh</p>
+<p>没关系，后面我看看怎么上线哈哈哈哈</p>
+<p>曦月</p>
+`
+        },
+        {
+            id: 89, date: '2026-07-24', icon: '🎫',
+            title: '彩票运气与睡眠',
+            preview: '彩票从来没中过超过5块钱的，睡眠饮食运动都很重要~',
+            stamp: '😴',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>哇塞！！你这运气</p>
+<p>话说我也卖过好多次彩票，从来没有中过超过5块钱的哈哈哈哈最多买包辣条就花完了哈哈哈</p>
+<p>是滴，按照现代养生学的角度，睡眠>饮食>运动</p>
+<p>经常跑图累的hhh😏</p>
+<p>不过认真的，真的得好好照顾好自己haha</p>
+<p>Xiyue</p>
+`
+        },
+        {
+            id: 90, date: '2026-07-24', icon: '🐱',
+            title: '小橘猫回复',
+            preview: '小猫把你当妈妈啦~你们老师还蛮有幽默的hhh',
+            stamp: '🧡',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>你们家猫刚生下来的小猫嘛</p>
+<p>它喜欢靠着你的背睡，那估计已经把你当作妈妈啦哈哈哈</p>
+<p>原来如此，那你们老师还蛮有幽默的，上课不至于太想睡觉hhh🤣</p>
+`
+        },
+        {
+            id: 91, date: '2026-07-24', icon: '🏔️',
+            title: '喀拉库勒湖',
+            preview: '是不是喀拉库勒湖？维语叫قاراكۆل，湖水像蓝宝石一样~',
+            stamp: '💎',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>哈哈哈哈是不是喀拉库勒湖</p>
+<p>你可能记得是维语قاراكۆل😏</p>
+<p>搜了一下图片，确实非常之好看😲难怪你比作蓝宝石一样</p>
+<p>另外打油诗是想了好久的呢😂哈哈哈哈哈</p>
+                <div class="letter-photo"><img src="images/email130_52.png" alt="喀拉库勒湖"></div>
+`
+        },
+        {
+            id: 92, date: '2026-07-24', icon: '😂',
+            title: '傻蛋是东北话',
+            preview: '傻蛋确实蛮可爱的，听着像东北话~',
+            stamp: '🗣️',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>傻蛋确实蛮可爱的哈哈哈哈哈哈哈，听着感觉像是东北话</p>
+<p>我发现东北话都蛮有意思的，比如傻老爷们，大碴子味儿😂老铁</p>
+`
+        },
+        {
+            id: 93, date: '2026-07-24', icon: '🩺',
+            title: '研究治愈糖尿病',
+            preview: 'AI写小说很简单，我研究的是如何治愈糖尿病不是怎么得糖尿病哈哈',
+            stamp: '🔬',
+            content: `
+                <div class="letter-from" data-i18n-raw="fromXiyue">—— 来自 曦月 ——</div>
+                <p>AI写的好，你只需要告诉AI你的大概的故事背景设定，你想要让谁和谁组cp, 文字风格偏好都可以指定哈哈哈，我其实也不太会写这些</p>
+<p>我研究的是如何治愈糖尿病，不是如何让人产生糖尿病 👀</p>
+<p>难怪有句话，我们终将会成为自己讨厌的样子哈哈哈哈哈🤣🤣🤣</p>
+<p>曦月</p>
+`
         },
     ];
 
@@ -1521,6 +1675,9 @@ const albumPhotos = [
         { src: 'images/aurora_10.jpg' },
         { src: 'images/aurora_11.jpg' },
         { src: 'images/aurora_12.jpg' },
+        { src: 'images/email123_45.jpg' },
+        { src: 'images/email123_46.jpg' },
+        { src: 'images/email130_52.png' },
     ];
 
     // ========================================
